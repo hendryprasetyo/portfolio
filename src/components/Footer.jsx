@@ -25,18 +25,8 @@ const Footer = () => {
           </a>
         </li>
         <li>
-          <a className="text-tertiary" href="#experience">
-            Experience
-          </a>
-        </li>
-        <li>
-          <a className="text-tertiary" href="#services">
-            Services
-          </a>
-        </li>
-        <li>
-          <a className="text-tertiary" href="#project">
-            Project
+          <a className="text-tertiary" href="#projects">
+            Projects
           </a>
         </li>
         <li>
