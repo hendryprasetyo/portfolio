@@ -27,7 +27,9 @@ import tesla from './company/tesla.png'
 
 import ecommerce from './ecommerce.png'
 import news from './news.png'
+import portfolio from './portfolio.png'
 
+import aris from './aris.jpeg'
 export {
   logo,
   backend,
@@ -55,4 +57,6 @@ export {
   tesla,
   ecommerce,
   news,
+  portfolio,
+  aris,
 }

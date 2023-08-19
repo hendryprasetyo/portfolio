@@ -17,6 +17,8 @@ import {
   shopify,
   ecommerce,
   news,
+  portfolio,
+  aris,
 } from '../assets'
 
 export const navLinks = [
@@ -24,10 +26,10 @@ export const navLinks = [
     id: 'about',
     title: 'About',
   },
-  {
-    id: 'work',
-    title: 'Work',
-  },
+  // {
+  //   id: 'work',
+  //   title: 'Work',
+  // },
   {
     id: 'projects',
     title: 'projects',
@@ -150,27 +152,11 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
-    image: 'https://randomuser.me/api/portraits/women/4.jpg',
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: 'Chris Brown',
-    designation: 'COO',
-    company: 'DEF Corp',
-    image: 'https://randomuser.me/api/portraits/men/5.jpg',
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: 'Lisa Wang',
-    designation: 'CTO',
-    company: '456 Enterprises',
-    image: 'https://randomuser.me/api/portraits/women/6.jpg',
+      'I thought it would be impossible to make a website as beautiful as I imagined, but Hendry proved me wrong.',
+    name: 'Aris',
+    designation: 'UI/UX Design',
+    company: '',
+    image: aris,
   },
 ]
 
@@ -234,6 +220,32 @@ const projects = [
     ],
     image: news,
     source_code_link: 'https://github.com/hendryprasetyo/news',
+  },
+  {
+    id: 3,
+    name: 'Portfolio',
+    description:
+      "A personal web portfolio with features to send messages through email and WhatsApp. The website's design is intentionally kept minimalistic yet captivating. The aim is to facilitate user exploration, leveraging the simplicity of the design to ensure effortless navigation through the content.",
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'typescript',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'tailwindcss',
+        color: 'text-purple-500',
+      },
+      {
+        name: 'framer-motion',
+        color: 'text-orange-500',
+      },
+    ],
+    image: portfolio,
+    source_code_link: 'https://github.com/hendryprasetyo/portfolio_aris',
   },
 ]
 
