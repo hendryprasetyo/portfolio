@@ -19,15 +19,17 @@ import redux from './tech/redux.png'
 import tailwind from './tech/tailwind.png'
 import typescript from './tech/typescript.png'
 import threejs from './tech/threejs.svg'
+import mysql from './tech/mysql.png'
 
 import meta from './company/meta.png'
 import shopify from './company/shopify.png'
 import starbucks from './company/starbucks.png'
 import tesla from './company/tesla.png'
 
-import ecommerce from './ecommerce.png'
-import news from './news.png'
-import portfolio from './portfolio.png'
+import ecommerce from './projects/ecommerce.png'
+import news from './projects/news.png'
+import portfolio from './projects/portfolio.png'
+import gym from './projects/gym.png'
 
 import aris from './aris.jpeg'
 export {
@@ -59,4 +61,6 @@ export {
   news,
   portfolio,
   aris,
+  gym,
+  mysql,
 }

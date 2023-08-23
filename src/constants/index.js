@@ -19,6 +19,9 @@ import {
   news,
   portfolio,
   aris,
+  gym,
+  typescript,
+  mysql,
 } from '../assets'
 
 export const navLinks = [
@@ -73,6 +76,10 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: 'TypeScript',
+    icon: typescript,
+  },
+  {
     name: 'Redux Toolkit',
     icon: redux,
   },
@@ -87,6 +94,10 @@ const technologies = [
   {
     name: 'MongoDB',
     icon: mongodb,
+  },
+  {
+    name: 'MYSQL',
+    icon: mysql,
   },
   {
     name: 'git',
@@ -163,6 +174,44 @@ const testimonials = [
 const projects = [
   {
     id: 1,
+    name: 'GYM',
+    description:
+      'Robust gym website with advanced security features. For the backend, the Go language was chosen to ensure strong performance and security. Meanwhile, the frontend is built using Next.js 13 with TypeScript, which incorporates modern web development practices for a seamless user experience. The goal is to create a simple yet elegant design that encourages users to comfortably interact with the site for a long time.',
+    tags: [
+      {
+        name: 'next.js',
+        color: 'text-black',
+      },
+      {
+        name: 'go',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'framer-motion',
+        color: 'text-orange-500',
+      },
+      {
+        name: 'mysql',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'typescript',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'react-hook-form',
+        color: 'text-pink-500',
+      },
+      {
+        name: 'zod',
+        color: 'text-purple-500',
+      },
+    ],
+    image: gym,
+    source_code_link: 'https://github.com/hendryprasetyo/news',
+  },
+  {
+    id: 2,
     name: 'Ecommerce Full Features',
     description:
       'The ecommerce application I have developed serves both sellers and buyers, enabling users to engage in transactions with a wide and diverse product catalog. It offers detailed product information, images, and ensures user security, along with various other features that enhance user convenience.',
@@ -191,12 +240,20 @@ const projects = [
         name: 'tailwindcss',
         color: 'text-blue-500',
       },
+      {
+        name: 'formik',
+        color: 'text-red-500',
+      },
+      {
+        name: 'yup',
+        color: 'text-yellow-500',
+      },
     ],
     image: ecommerce,
     source_code_link: 'https://github.com/hendryprasetyo/ecomerce ',
   },
   {
-    id: 2,
+    id: 3,
     name: 'News',
     description:
       'A dynamic news platform that provides users with the convenience to view trending news, equipped with a highly responsive news search feature, enabling users to easily find their desired news articles. Additionally, there is an administrative feature that allows for news creation and website management with a high level of security.',
@@ -222,7 +279,7 @@ const projects = [
     source_code_link: 'https://github.com/hendryprasetyo/news',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Portfolio',
     description:
       "A personal web portfolio with features to send messages through email and WhatsApp. The website's design is intentionally kept minimalistic yet captivating. The aim is to facilitate user exploration, leveraging the simplicity of the design to ensure effortless navigation through the content.",
