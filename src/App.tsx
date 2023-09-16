@@ -7,6 +7,7 @@ import {
   Footer,
   Hero,
   Navbar,
+  StarsCanvas,
   Tech,
 } from './components'
 import Projects from './components/Projects'
@@ -26,7 +27,7 @@ const App = () => {
         <Feedbacks />
         <div className="relative z-0">
           <Contact />
-          {/* <StarsCanvas /> */}
+          <StarsCanvas />
         </div>
         <Footer />
       </div>
