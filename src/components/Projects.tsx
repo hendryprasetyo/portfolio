@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import Tilt from 'react-tilt'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
@@ -10,7 +9,6 @@ interface IProjectCard {
   index: number
   name: string
   description: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   tags: TTagsProjects[]
   image: string
   source_code_link: string
