@@ -1,6 +1,6 @@
 declare module 'maath/random/dist/maath-random.esm' {
   interface InSphereOptions {
-    radius: number
+    radius?: number
     center?: Float32Array | number[]
     scale?: number
   }

@@ -1,36 +1,16 @@
-import { BrowserRouter } from 'react-router-dom'
-
-import {
-  About,
-  Contact,
-  Feedbacks,
-  Footer,
-  Hero,
-  Navbar,
-  StarsCanvas,
-  Tech,
-} from './components'
-import Projects from './components/Projects'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import MainLayout from './components/MainLayout'
+import Home from './pages/Home'
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary overflow-hidden">
-        <div className="bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        {/* <Experience /> */}
-        <Tech />
-        <Projects />
-        <Feedbacks />
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
-        <Footer />
-      </div>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/portfolio" element={<Home />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   )
 }

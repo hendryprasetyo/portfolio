@@ -10,8 +10,7 @@ import {
 
 import CanvasLoader from '../Loader'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Ball = (props: any) => {
+const Ball = (props: { imgUrl: string }) => {
   const [decal] = useTexture([props.imgUrl])
 
   return (

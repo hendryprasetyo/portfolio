@@ -1,4 +1,4 @@
-import Tilt from 'react-tilt'
+import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { services, TService } from '../constants'
@@ -9,7 +9,8 @@ type Service = {
   title: string
   icon: string
 }
-const ServiceCard = ({ index, title, icon }: Service) => (
+
+const ServiceCard: React.FC<Service> = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
@@ -49,7 +50,7 @@ const About = () => {
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service: TService, index) => {
+        {services.map((service: TService, index: number) => {
           return <ServiceCard key={service.title} index={index} {...service} />
         })}
       </div>

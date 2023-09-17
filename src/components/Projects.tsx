@@ -1,4 +1,4 @@
-import Tilt from 'react-tilt'
+import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { github } from '../assets'
@@ -13,6 +13,7 @@ interface IProjectCard {
   image: string
   source_code_link: string
 }
+// eslint-disable-next-line react-refresh/only-export-components
 const ProjectCard = ({
   index,
   name,
