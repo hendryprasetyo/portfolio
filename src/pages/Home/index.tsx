@@ -1,10 +1,17 @@
-import { About, Contact, Feedbacks, Projects, Tech } from '../../components'
+import {
+  About,
+  Contact,
+  Experience,
+  Feedbacks,
+  Projects,
+  Tech,
+} from '../../components'
 
 const Home = () => {
   return (
     <>
       <About />
-      {/* <Experience /> */}
+      <Experience />
       <Tech />
       <Projects />
       <Feedbacks />

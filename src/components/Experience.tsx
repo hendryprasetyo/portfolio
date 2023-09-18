@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -44,9 +45,9 @@ const ExperienceCard = ({ experience }: { experience: TExperiences }) => {
       </div>
 
       <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
+        {experience.points.map(point => (
           <li
-            key={`experience-point-${index}`}
+            key={point.length}
             className="text-secondary-100 text-[14px] pl-1 tracking-wider"
           >
             {point}
@@ -70,12 +71,9 @@ const Experience = () => {
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience: TExperiences, index) => (
-            <ExperienceCard
-              key={`experience-${index}`}
-              experience={experience}
-            />
+        <VerticalTimeline lineColor="#27374D">
+          {experiences.map((experience: TExperiences) => (
+            <ExperienceCard key={experience.id} experience={experience} />
           ))}
         </VerticalTimeline>
       </div>

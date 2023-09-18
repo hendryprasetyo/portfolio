@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useRef, useState, ChangeEvent, FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { styles } from '../styles'
 import { navLinks, TNavLinks } from '../constants'
@@ -33,8 +32,8 @@ const Navbar = () => {
       }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
+        <a
+          href="#"
           className="flex items-center gap-2"
           onClick={() => {
             setActive('')
@@ -45,7 +44,7 @@ const Navbar = () => {
           <p className="text-black-100 text-[20px] font-bold cursor-pointer flex ">
             Hendry Prasetyo
           </p>
-        </Link>
+        </a>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav: TNavLinks) => (

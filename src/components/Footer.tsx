@@ -15,22 +15,34 @@ const Footer = () => {
 
       <ul className="flex flex-wrap justify-center gap-[2rem]">
         <li>
-          <a className="text-tertiary" href="#">
+          <a
+            className="text-tertiary hover:text-secondary hover:font-medium transition"
+            href="#"
+          >
             Home
           </a>
         </li>
         <li>
-          <a className="text-tertiary" href="#about">
+          <a
+            className="text-tertiary hover:text-secondary hover:font-medium transition"
+            href="#about"
+          >
             About
           </a>
         </li>
         <li>
-          <a className="text-tertiary" href="#projects">
+          <a
+            className="text-tertiary hover:text-secondary hover:font-medium transition"
+            href="#projects"
+          >
             Projects
           </a>
         </li>
         <li>
-          <a className="text-tertiary" href="#contact">
+          <a
+            className="text-tertiary hover:text-secondary hover:font-medium transition"
+            href="#contact"
+          >
             Contact
           </a>
         </li>
@@ -38,22 +50,22 @@ const Footer = () => {
 
       <div className="flex justify-center gap-[1rem] my-[2rem]">
         <Link
-          className="bg-tertiary text-quinary p-[0.8rem] flex rounded-xl hover:border-1 hover:bg-quaternary hover:text-secondary hover:border-secondary"
+          className="bg-tertiary text-quinary p-[0.8rem] flex rounded-xl hover:border-1 hover:bg-quaternary hover:text-secondary hover:border-secondary transition-all"
           to="http://github.com/hendryprasetyo"
           target="_blank"
         >
           <FaGithub />
         </Link>
         <Link
-          className="bg-tertiary text-quinary p-[0.8rem] flex rounded-xl border-1 hover:bg-quaternary hover:text-secondary hover:border-secondary"
+          className="bg-tertiary text-quinary p-[0.8rem] flex rounded-xl border-1 hover:bg-quaternary hover:text-secondary hover:border-secondary transition-all"
           to="http://instagram.com/hendryprras"
           target="_blank"
         >
           <FaInstagram />
         </Link>
         <Link
-          className="bg-tertiary text-quinary p-[0.8rem] flex rounded-xl border-1 hover:bg-quaternary hover:text-secondary hover:border-secondary"
-          to="https://www.linkedin.com/in/hendry-prasetyo-1a2242268/"
+          className="bg-tertiary text-quinary p-[0.8rem] flex rounded-xl border-1 hover:bg-quaternary hover:text-secondary hover:border-secondary transition-all"
+          to="https://www.linkedin.com/in/hendrypras"
           target="_blank"
         >
           <BsLinkedin />

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Variants } from 'framer-motion' //
 export const textVariant = (delay?: number): Variants => {
   return {
@@ -23,10 +24,23 @@ export const fadeIn = (
   delay: number,
   duration: number
 ): Variants => {
+  let x = 0
+  let y = 0
+  if (direction === 'left') {
+    x = 100
+  } else if (direction === 'right') {
+    x = -100
+  }
+
+  if (direction === 'up') {
+    y = 100
+  } else if (direction === 'down') {
+    y = -100
+  }
   return {
     hidden: {
-      x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
-      y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
+      x: x,
+      y: y,
       opacity: 0,
     },
     show: {
@@ -68,10 +82,23 @@ export const slideIn = (
   delay: number,
   duration: number
 ): Variants => {
+  let x = 0
+  let y = 0
+
+  if (direction === 'left') {
+    x = -100
+  } else if (direction === 'right') {
+    x = 100
+  }
+
+  if (direction === 'up' || direction === 'down') {
+    y = 100
+  }
+
   return {
     hidden: {
-      x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
-      y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
+      x: x,
+      y: y,
     },
     show: {
       x: 0,
@@ -87,17 +114,15 @@ export const slideIn = (
 }
 
 export const staggerContainer = (
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   staggerChildren?: any,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  delayChildren?: any
+  delayChildren?: number
 ) => {
   return {
     hidden: {},
     show: {
       transition: {
         staggerChildren: staggerChildren,
-        delayChildren: delayChildren || 0,
+        delayChildren: delayChildren ?? 0,
       },
     },
   }
