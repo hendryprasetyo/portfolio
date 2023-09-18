@@ -4,12 +4,23 @@ import { styles } from '../styles'
 import Lottie from 'lottie-react'
 import HeroAnimationData from '../assets/hero.json'
 import HeroRobotHello from '../assets/robot_heloo.json'
+import HeroBg from '../assets/hero_bg.json'
 const Hero = () => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
+        <Lottie
+          animationData={HeroBg}
+          loop={true}
+          className="absolute h-full w-max left-0 top-0"
+        />
+        <Lottie
+          animationData={HeroBg}
+          loop={true}
+          className="absolute h-full w-max right-0 top-0"
+        />
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
           <div className="w-1 sm:h-52 h-32 violet-gradient" />
