@@ -16,8 +16,5 @@ declare module 'react-tilt' {
   }
 
   // Komponen Tilt dalam modul 'react-tilt'.
-  const Tilt: React.FC<TiltProps>
-
-  // Ekspor komponen Tilt.
-  export default Tilt
+  export const Tilt: React.FC<TiltProps>
 }
