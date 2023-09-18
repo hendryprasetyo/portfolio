@@ -35,17 +35,17 @@ const Hero = () => {
         <Lottie
           animationData={HeroRobotHello}
           loop={true}
-          className="w-60 h-60 -mt-16"
+          className="w-60 h-60 -mt-14 xl:ml-52 lg:block hidden"
         />
       </div>
-      <div className="absolute w-full flex justify-center items-center top-[300px] left-0">
+      <div className="absolute w-full flex justify-center items-center top-[150px] sm:top-[300px] left-0">
         <Lottie
           animationData={HeroAnimationData}
           className="w-[600px] h-[600px]"
         />
       </div>
 
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+      <div className="absolute xs:bottom-10 bottom-0 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
