@@ -248,9 +248,9 @@ const projects: TProjects[] = [
   },
   {
     id: 2,
-    name: 'Ecommerce Full Features',
+    name: 'Marketplace Web Site',
     description:
-      'The ecommerce application I have developed serves both sellers and buyers, enabling users to engage in transactions with a wide and diverse product catalog. It offers detailed product information, images, and ensures user security, along with various other features that enhance user convenience.',
+      'The Marcketplace application I have developed serves both sellers and buyers, enabling users to engage in transactions with a wide and diverse product catalog. It offers detailed product information, images, and ensures user security, along with various other features that enhance user convenience.',
     tags: [
       {
         name: 'react',
