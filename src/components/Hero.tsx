@@ -4,7 +4,8 @@ import { styles } from '../styles'
 import Lottie from 'lottie-react'
 import HeroAnimationData from '../assets/hero.json'
 import HeroRobotHello from '../assets/robot_heloo.json'
-const Hero = () => {
+import { memo } from 'react'
+const Hero = memo(() => {
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -64,6 +65,6 @@ const Hero = () => {
       </div>
     </section>
   )
-}
+})
 
 export default Hero

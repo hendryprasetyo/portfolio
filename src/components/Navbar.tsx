@@ -1,9 +1,8 @@
-import { useEffect, useState } from 'react'
+import { Suspense, lazy, useEffect, useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { styles } from '../styles'
 import { navLinks, TNavLinks } from '../constants'
-import { logo } from '../assets'
-
+const LazyLogo = lazy(() => import('./LogoNavbar'))
 const Navbar = () => {
   const [active, setActive] = useState<string>('')
   const [toggle, setToggle] = useState<boolean>(false)
@@ -40,7 +39,9 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 rounded-full" />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LazyLogo />
+          </Suspense>
           <p className="text-black-100 text-[20px] font-bold cursor-pointer flex ">
             Hendry Prasetyo
           </p>

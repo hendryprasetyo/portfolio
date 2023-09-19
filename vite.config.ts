@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/portfolio',
   server: {
-    port: 3999,
+    port: 3991,
     open: true,
   },
 })

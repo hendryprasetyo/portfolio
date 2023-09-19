@@ -1,11 +1,12 @@
 import { motion, AnimatePresence } from 'framer-motion'
+import { memo } from 'react'
 interface IModal {
   open: boolean
   text: string
   func: () => void
   icon: React.ReactNode
 }
-const Modal = ({ open, text, func, icon }: IModal) => {
+const Modal = memo(({ open, text, func, icon }: IModal) => {
   return (
     <AnimatePresence>
       {open && (
@@ -38,6 +39,6 @@ const Modal = ({ open, text, func, icon }: IModal) => {
       )}
     </AnimatePresence>
   )
-}
+})
 
 export default Modal

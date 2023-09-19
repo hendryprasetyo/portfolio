@@ -1,8 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from 'react-vertical-timeline-component'
+import { VerticalTimeline } from 'react-vertical-timeline-component'
 import { motion } from 'framer-motion'
 
 import 'react-vertical-timeline-component/style.min.css'
@@ -11,52 +8,7 @@ import { styles } from '../styles'
 import { experiences, TExperiences } from '../constants'
 import { SectionWrapper } from '../hoc'
 import { textVariant } from '../utils/motion'
-
-const ExperienceCard = ({ experience }: { experience: TExperiences }) => {
-  return (
-    <VerticalTimelineElement
-      contentStyle={{
-        background: '#DDE6ED',
-        color: '#27374D',
-      }}
-      contentArrowStyle={{ borderRight: '7px solid  #526D82' }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
-      icon={
-        <div className="flex justify-center items-center w-full h-full">
-          <img
-            src={experience.icon}
-            alt={experience.company_name}
-            className="w-[60%] h-[60%] object-contain"
-          />
-        </div>
-      }
-    >
-      <div>
-        <h3 className="text-secondary text-[24px] font-bold">
-          {experience.title}
-        </h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.company_name}
-        </p>
-      </div>
-
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map(point => (
-          <li
-            key={point.length}
-            className="text-secondary-100 text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
-    </VerticalTimelineElement>
-  )
-}
+import ExperienceCard from './ExperienceCard'
 
 const Experience = () => {
   return (

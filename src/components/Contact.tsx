@@ -1,12 +1,12 @@
 /* eslint-disable react-refresh/only-export-components */
-import { useRef, useState, ChangeEvent, FormEvent } from 'react'
+import { useRef, useState, ChangeEvent, FormEvent, lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 import { styles } from '../styles'
 import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
-import Modal from './Modal'
+const Modal = lazy(() => import('./Modal'))
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai'
 
 type FormState = {
@@ -78,12 +78,15 @@ const Contact = () => {
 
   return (
     <>
-      <Modal
-        open={openModal}
-        icon={modalIcon}
-        text={modalText}
-        func={() => setOpenModal(false)}
-      />
+      <Suspense fallback={<div>loading...</div>}>
+        <Modal
+          open={openModal}
+          icon={modalIcon}
+          text={modalText}
+          func={() => setOpenModal(false)}
+        />
+      </Suspense>
+
       <div
         className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
       >

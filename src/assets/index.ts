@@ -1,14 +1,9 @@
-import logo from './logo.jpg'
 import backend from './backend.png'
 import mobile from './mobile.png'
 import web from './web.png'
-import github from './github.png'
-import menu from './menu.svg'
-import close from './close.svg'
+import aris from './aris.ico'
 
 import css from './tech/css.png'
-import docker from './tech/docker.png'
-import figma from './tech/figma.png'
 import git from './tech/git.png'
 import html from './tech/html.png'
 import javascript from './tech/javascript.png'
@@ -19,24 +14,16 @@ import redux from './tech/redux.png'
 import tailwind from './tech/tailwind.png'
 import typescript from './tech/typescript.png'
 import mysql from './tech/mysql.png'
-
 import ecommerce from './projects/ecommerce.jpg'
 import news from './projects/news.jpg'
 import portfolio from './projects/portfolio.jpg'
 import gym from './projects/gym.jpg'
-
-import aris from './aris.jpg'
 export {
-  logo,
+  aris,
   backend,
   mobile,
   web,
-  github,
-  menu,
-  close,
   css,
-  docker,
-  figma,
   git,
   html,
   javascript,
@@ -46,10 +33,9 @@ export {
   redux,
   tailwind,
   typescript,
+  mysql,
   ecommerce,
   news,
   portfolio,
-  aris,
   gym,
-  mysql,
 }

@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useCallback, useEffect, useRef } from 'react'
 
 interface LazyImageProps {
   src: string
@@ -9,6 +10,12 @@ interface LazyImageProps {
 const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
   const imageRef = useRef<HTMLImageElement | null>(null)
 
+  const handleImageLoad = useCallback(() => {
+    if (imageRef.current) {
+      imageRef.current.src = src
+    }
+  }, [src])
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -17,12 +24,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
           const image = new Image()
           image.src = src
           image.alt = alt
-          image.onload = () => {
-            // Gambar telah dimuat, kita akan mengganti sumber gambar pada elemen <img>
-            if (imageRef.current) {
-              imageRef.current.src = src
-            }
-          }
+          image.onload = handleImageLoad
         }
       })
     })
@@ -36,7 +38,7 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, className }) => {
         observer.unobserve(imageRef.current)
       }
     }
-  }, [src, alt])
+  }, [src, alt, handleImageLoad])
 
   return <img ref={imageRef} alt={alt} className={className} />
 }
