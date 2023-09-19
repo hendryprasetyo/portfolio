@@ -20,143 +20,6 @@ import {
   mysql,
 } from '../assets'
 
-export type TNavLinks = {
-  id: string
-  title: string
-}
-export const navLinks: TNavLinks[] = [
-  {
-    id: 'about',
-    title: 'About',
-  },
-  // {
-  //   id: 'work',
-  //   title: 'Work',
-  // },
-  {
-    id: 'projects',
-    title: 'projects',
-  },
-  {
-    id: 'contact',
-    title: 'Contact',
-  },
-]
-export type TService = {
-  title: string
-  icon: string
-}
-const services: TService[] = [
-  {
-    title: 'Full-Stack Web Developer',
-    icon: web,
-  },
-  {
-    title: 'Frontend Developer',
-    icon: mobile,
-  },
-  {
-    title: 'Backend Developer',
-    icon: backend,
-  },
-]
-
-export type TTechnologies = {
-  name: string
-  icon: string
-}
-const technologies: TTechnologies[] = [
-  {
-    name: 'HTML 5',
-    icon: html,
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
-  },
-  {
-    name: 'JavaScript',
-    icon: javascript,
-  },
-  {
-    name: 'React JS',
-    icon: reactjs,
-  },
-  {
-    name: 'TypeScript',
-    icon: typescript,
-  },
-  {
-    name: 'Redux Toolkit',
-    icon: redux,
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: tailwind,
-  },
-  {
-    name: 'Node JS',
-    icon: nodejs,
-  },
-  {
-    name: 'MongoDB',
-    icon: mongodb,
-  },
-  {
-    name: 'MYSQL',
-    icon: mysql,
-  },
-  {
-    name: 'git',
-    icon: git,
-  },
-]
-
-export type TExperiences = {
-  id: number
-  title: string
-  company_name: string
-  icon: string
-  iconBg: string
-  date: string
-  points: string[]
-}
-const experiences: TExperiences[] = [
-  {
-    id: 1,
-    title: 'React.js Developer',
-    company_name: 'Freelance',
-    icon: aris,
-    iconBg: '#383E56',
-    date: 'August 2023',
-    points: [
-      'Developing websites that comply with the accessibility standards, policies and procedures.',
-      'Developing and managed web accessibility testing plans and processes, including setting up and configuring tools.',
-      'Developing the websites using React.js, Typescript, Tailwind CSS, Framer Motion',
-    ],
-  },
-]
-export type TTestimonials = {
-  testimonial: string
-  name: string
-  designation: string
-  company: string
-  image: string
-}
-const testimonials: TTestimonials[] = [
-  {
-    testimonial:
-      'I thought it would be impossible to make a website as beautiful as I imagined, but Hendry proved me wrong.',
-    name: 'Aris',
-    designation: 'UI/UX Design',
-    company: '',
-    image: aris,
-  },
-]
-export type TTagsProjects = {
-  name: string
-  color: string
-}
 export type TProjects = {
   id: number
   name: string
@@ -299,5 +162,143 @@ const projects: TProjects[] = [
     source_code_link: 'https://github.com/hendryprasetyo/portfolio_aris',
   },
 ]
+
+export type TNavLinks = {
+  id: string
+  title: string
+}
+export const navLinks: TNavLinks[] = [
+  {
+    id: 'about',
+    title: 'About',
+  },
+  // {
+  //   id: 'work',
+  //   title: 'Work',
+  // },
+  {
+    id: 'projects',
+    title: 'projects',
+  },
+  {
+    id: 'contact',
+    title: 'Contact',
+  },
+]
+export type TService = {
+  title: string
+  icon: string
+}
+const services: TService[] = [
+  {
+    title: 'Full-Stack Web Developer',
+    icon: web,
+  },
+  {
+    title: 'Frontend Developer',
+    icon: mobile,
+  },
+  {
+    title: 'Backend Developer',
+    icon: backend,
+  },
+]
+
+export type TTechnologies = {
+  name: string
+  icon: string
+}
+const technologies: TTechnologies[] = [
+  {
+    name: 'HTML 5',
+    icon: html,
+  },
+  {
+    name: 'CSS 3',
+    icon: css,
+  },
+  {
+    name: 'JavaScript',
+    icon: javascript,
+  },
+  {
+    name: 'React JS',
+    icon: reactjs,
+  },
+  {
+    name: 'TypeScript',
+    icon: typescript,
+  },
+  {
+    name: 'Redux Toolkit',
+    icon: redux,
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: tailwind,
+  },
+  {
+    name: 'Node JS',
+    icon: nodejs,
+  },
+  {
+    name: 'MongoDB',
+    icon: mongodb,
+  },
+  {
+    name: 'MYSQL',
+    icon: mysql,
+  },
+  {
+    name: 'git',
+    icon: git,
+  },
+]
+
+export type TExperiences = {
+  id: number
+  title: string
+  company_name: string
+  icon: string
+  iconBg: string
+  date: string
+  points: string[]
+}
+const experiences: TExperiences[] = [
+  {
+    id: 1,
+    title: 'React.js Developer',
+    company_name: 'Freelance',
+    icon: aris,
+    iconBg: '#383E56',
+    date: 'August 2023',
+    points: [
+      'Developing websites that comply with the accessibility standards, policies and procedures.',
+      'Developing and managed web accessibility testing plans and processes, including setting up and configuring tools.',
+      'Developing the websites using React.js, Typescript, Tailwind CSS, Framer Motion',
+    ],
+  },
+]
+export type TTestimonials = {
+  testimonial: string
+  name: string
+  designation: string
+  company: string
+  image: string
+}
+const testimonials: TTestimonials[] = [
+  {
+    testimonial:
+      'I thought it would be impossible to make a website as beautiful as I imagined, but Hendry proved me wrong.',
+    name: 'Aris',
+    designation: 'UI/UX Design',
+    company: '',
+    image: aris,
+  },
+]
+export type TTagsProjects = {
+  name: string
+  color: string
+}
 
 export { services, technologies, experiences, testimonials, projects }

@@ -20,12 +20,12 @@ import tailwind from './tech/tailwind.png'
 import typescript from './tech/typescript.png'
 import mysql from './tech/mysql.png'
 
-import ecommerce from './projects/ecommerce.png'
-import news from './projects/news.png'
-import portfolio from './projects/portfolio.png'
-import gym from './projects/gym.png'
+import ecommerce from './projects/ecommerce.jpg'
+import news from './projects/news.jpg'
+import portfolio from './projects/portfolio.jpg'
+import gym from './projects/gym.jpg'
 
-import aris from './aris.jpeg'
+import aris from './aris.jpg'
 export {
   logo,
   backend,

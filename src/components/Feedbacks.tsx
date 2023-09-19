@@ -1,8 +1,10 @@
+/* eslint-disable react-refresh/only-export-components */
 import { motion } from 'framer-motion'
 import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
 import { fadeIn, textVariant } from '../utils/motion'
 import { testimonials } from '../constants'
+import LazyImage from '../utils/LazyImage'
 interface IFeedbackCard {
   index: number
   testimonial: string
@@ -37,9 +39,9 @@ const FeedbackCard = ({
             {designation} {company}
           </p>
         </div>
-        <img
-          src={image}
+        <LazyImage
           alt={`feedback_by-${name}`}
+          src={image}
           className="w-10 h-10 rounded-full object-cover"
         />
       </div>

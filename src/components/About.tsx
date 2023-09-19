@@ -5,6 +5,7 @@ import { styles } from '../styles'
 import { services, TService } from '../constants'
 import { SectionWrapper } from '../hoc'
 import { fadeIn, textVariant } from '../utils/motion'
+import LazyImage from '../utils/LazyImage'
 type Service = {
   index: number
   title: string
@@ -18,9 +19,9 @@ const ServiceCard: React.FC<Service> = ({ index, title, icon }) => (
       className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div className="bg-[#DDE6ED] rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-        <img
-          src={icon}
+        <LazyImage
           alt="web-development"
+          src={icon}
           className="w-16 h-16 object-contain"
         />
         <h3 className="text-[#27374D] text-[20px] font-bold text-center">

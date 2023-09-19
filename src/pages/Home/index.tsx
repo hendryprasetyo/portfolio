@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <>
       <About />
-      <Experience />
       <Tech />
+      <Experience />
       <Projects />
       <Feedbacks />
       <Contact />
