@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FaGithub, FaInstagram } from 'react-icons/fa'
 import { BsLinkedin } from 'react-icons/bs'
+import { AiOutlineMail } from 'react-icons/ai'
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
@@ -49,6 +50,13 @@ const Footer = () => {
       </ul>
 
       <div className="flex justify-center gap-[1rem] my-[2rem]">
+        <Link
+          className="bg-tertiary text-quinary p-[0.8rem] flex rounded-xl hover:border-1 hover:bg-quaternary hover:text-secondary hover:border-secondary transition-all"
+          to="mailto:hendryprasetyo13@gmail.com"
+          target="_blank"
+        >
+          <AiOutlineMail />
+        </Link>
         <Link
           className="bg-tertiary text-quinary p-[0.8rem] flex rounded-xl hover:border-1 hover:bg-quaternary hover:text-secondary hover:border-secondary transition-all"
           to="http://github.com/hendryprasetyo"

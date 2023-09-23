@@ -1,5 +1,4 @@
 import { Tilt } from 'react-tilt'
-import LazyImage from '../utils/LazyImage'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../utils/motion'
 import { services, TService } from '../constants'
@@ -14,7 +13,7 @@ const AboutCard: React.FC = () => (
             className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
           >
             <div className="bg-[#DDE6ED] rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
-              <LazyImage
+              <img
                 alt="web-development"
                 src={service.icon}
                 className="w-16 h-16 object-contain"

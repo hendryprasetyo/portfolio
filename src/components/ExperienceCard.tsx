@@ -1,6 +1,5 @@
 import { VerticalTimelineElement } from 'react-vertical-timeline-component'
 import { TExperiences } from '../constants'
-import LazyImage from '../utils/LazyImage'
 import { memo } from 'react'
 const ExperienceCard = memo(({ experience }: { experience: TExperiences }) => {
   return (
@@ -14,7 +13,7 @@ const ExperienceCard = memo(({ experience }: { experience: TExperiences }) => {
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className="flex justify-center items-center w-full h-full">
-          <LazyImage
+          <img
             alt={experience.company_name}
             src={experience.icon}
             className="w-[60%] h-[60%] object-contain"

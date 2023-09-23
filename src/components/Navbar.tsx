@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect, useState } from 'react'
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { styles } from '../styles'
 import { navLinks, TNavLinks } from '../constants'
+import LoadingSpinner from './LoadingSpinner'
 const LazyLogo = lazy(() => import('./LogoNavbar'))
 const Navbar = () => {
   const [active, setActive] = useState<string>('')
@@ -39,7 +40,7 @@ const Navbar = () => {
             window.scrollTo(0, 0)
           }}
         >
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<LoadingSpinner />}>
             <LazyLogo />
           </Suspense>
           <p className="text-black-100 text-[20px] font-bold cursor-pointer flex ">
