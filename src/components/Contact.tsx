@@ -8,6 +8,7 @@ import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
 const Modal = lazy(() => import('./Modal'))
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai'
+import LoadingSpinner from './LoadingSpinner'
 
 type FormState = {
   name: string
@@ -78,7 +79,7 @@ const Contact = () => {
 
   return (
     <>
-      <Suspense fallback={<div>loading...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <Modal
           open={openModal}
           icon={modalIcon}
@@ -152,9 +153,9 @@ const Contact = () => {
                 form.message === ''
               }
               type="submit"
-              className="bg-quaternary py-3 px-8 rounded-xl outline-none w-fit text-secondary font-bold shadow-md shadow-primary disabled:bg-quaternary/50"
+              className="bg-quaternary py-3 px-8 rounded-xl outline-none w-fit text-secondary font-bold shadow-md shadow-primary disabled:bg-quaternary/70 disabled:text-gray-100"
             >
-              {loading ? 'Sending...' : 'Send'}
+              {loading ? <LoadingSpinner /> : 'Send'}
             </button>
           </form>
         </motion.div>

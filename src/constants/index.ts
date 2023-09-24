@@ -31,7 +31,7 @@ export const testimonials: TTestimonials[] = [
   {
     testimonial:
       'I thought it would be impossible to make a website as beautiful as I imagined, but Hendry proved me wrong.',
-    name: 'Aris',
+    name: 'Hermawan',
     designation: 'UI/UX Design',
     company: '',
     image: aris,

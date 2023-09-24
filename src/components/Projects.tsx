@@ -28,7 +28,7 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap sm:justify-around gap-7 xl:justify-start">
         <ProjectCard />
       </div>
     </>
