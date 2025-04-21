@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FaGithub, FaInstagram } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 import { BsLinkedin } from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/ai'
 const Footer = () => {
@@ -63,13 +63,6 @@ const Footer = () => {
           target="_blank"
         >
           <FaGithub />
-        </Link>
-        <Link
-          className="bg-tertiary text-quinary p-[0.8rem] flex rounded-xl border-1 hover:bg-quaternary hover:text-secondary hover:border-secondary transition-all"
-          to="http://instagram.com/hendryprras"
-          target="_blank"
-        >
-          <FaInstagram />
         </Link>
         <Link
           className="bg-tertiary text-quinary p-[0.8rem] flex rounded-xl border-1 hover:bg-quaternary hover:text-secondary hover:border-secondary transition-all"

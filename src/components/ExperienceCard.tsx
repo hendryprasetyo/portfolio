@@ -2,6 +2,10 @@ import { VerticalTimelineElement } from 'react-vertical-timeline-component'
 import { TExperiences } from '../constants'
 import { memo } from 'react'
 const ExperienceCard = memo(({ experience }: { experience: TExperiences }) => {
+  const experianceDate =
+    experience.start_date === experience.end_date
+      ? experience.start_date
+      : `${experience.start_date} - ${experience.end_date}`
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -9,14 +13,13 @@ const ExperienceCard = memo(({ experience }: { experience: TExperiences }) => {
         color: '#27374D',
       }}
       contentArrowStyle={{ borderRight: '7px solid  #526D82' }}
-      date={experience.date}
-      iconStyle={{ background: experience.iconBg }}
+      date={experianceDate}
       icon={
-        <div className="flex justify-center items-center w-full h-full">
+        <div className="flex justify-center items-center w-full h-full overflow-hidden rounded-full border">
           <img
             alt={experience.company_name}
             src={experience.icon}
-            className="w-[60%] h-[60%] object-contain"
+            className="w-full h-full object-contain"
           />
         </div>
       }
@@ -29,7 +32,7 @@ const ExperienceCard = memo(({ experience }: { experience: TExperiences }) => {
           className="text-secondary text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
-          {experience.company_name}
+          {experience.company_name}, {experience.location}
         </p>
       </div>
 
