@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://shends.github.io/portfolio",
+  "homepage": "https://hendryprasetyo.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
