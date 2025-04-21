@@ -1,4 +1,9 @@
-import { VerticalTimelineElement } from 'react-vertical-timeline-component'
+import { VerticalTimelineElement as RawVerticalTimelineElement } from 'react-vertical-timeline-component'
+import type { FC } from 'react'
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const VerticalTimelineElement = RawVerticalTimelineElement as unknown as FC<any>
+
 import { TExperiences } from '../constants'
 import { memo } from 'react'
 const ExperienceCard = memo(({ experience }: { experience: TExperiences }) => {
