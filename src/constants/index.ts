@@ -15,9 +15,15 @@ import {
   mysql,
   aris,
   ecommerce,
-  gym,
   portfolio,
   news,
+  phincon_logo,
+  nest_js_logo,
+  docker_logo,
+  express_js_logo,
+  redis_logo,
+  rabbitmq_logo,
+  next_js_logo,
 } from '../assets'
 
 export type TTestimonials = {
@@ -27,6 +33,7 @@ export type TTestimonials = {
   company: string
   image: string
 }
+
 export const testimonials: TTestimonials[] = [
   {
     testimonial:
@@ -42,6 +49,7 @@ export type TTagsProjects = {
   name: string
   color: string
 }
+
 export type TProjects = {
   id: number
   name: string
@@ -51,44 +59,44 @@ export type TProjects = {
   source_code_link: string
 }
 export const projects: TProjects[] = [
-  {
-    id: 1,
-    name: 'GYM',
-    description:
-      'Robust gym website with advanced security features. For the backend, the Go language was chosen to ensure strong performance and security. Meanwhile, the frontend is built using Next.js 13 with TypeScript, which incorporates modern web development practices for a seamless user experience. The goal is to create a simple yet elegant design that encourages users to comfortably interact with the site for a long time.',
-    tags: [
-      {
-        name: 'next.js',
-        color: 'text-black',
-      },
-      {
-        name: 'go',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'framer-motion',
-        color: 'text-orange-500',
-      },
-      {
-        name: 'mysql',
-        color: 'text-blue-500',
-      },
-      {
-        name: 'typescript',
-        color: 'text-blue-500',
-      },
-      {
-        name: 'react-hook-form',
-        color: 'text-pink-500',
-      },
-      {
-        name: 'zod',
-        color: 'text-purple-500',
-      },
-    ],
-    image: gym,
-    source_code_link: 'https://github.com/hendryprasetyo/news',
-  },
+  // {
+  //   id: 1,
+  //   name: 'GYM',
+  //   description:
+  //     'Robust gym website with advanced security features. For the backend, the Go language was chosen to ensure strong performance and security. Meanwhile, the frontend is built using Next.js 13 with TypeScript, which incorporates modern web development practices for a seamless user experience. The goal is to create a simple yet elegant design that encourages users to comfortably interact with the site for a long time.',
+  //   tags: [
+  //     {
+  //       name: 'next.js',
+  //       color: 'text-black',
+  //     },
+  //     {
+  //       name: 'go',
+  //       color: 'blue-text-gradient',
+  //     },
+  //     {
+  //       name: 'framer-motion',
+  //       color: 'text-orange-500',
+  //     },
+  //     {
+  //       name: 'mysql',
+  //       color: 'text-blue-500',
+  //     },
+  //     {
+  //       name: 'typescript',
+  //       color: 'text-blue-500',
+  //     },
+  //     {
+  //       name: 'react-hook-form',
+  //       color: 'text-pink-500',
+  //     },
+  //     {
+  //       name: 'zod',
+  //       color: 'text-purple-500',
+  //     },
+  //   ],
+  //   image: gym,
+  //   source_code_link: 'https://github.com/hendryprasetyo/news',
+  // },
   {
     id: 2,
     name: 'Marketplace Web Site',
@@ -192,20 +200,46 @@ export type TExperiences = {
   icon: string
   iconBg: string
   date: string
+  start_date: string
+  end_date: string
+  location: string
   points: string[]
 }
 export const experiences: TExperiences[] = [
   {
     id: 1,
-    title: 'React.js Developer',
-    company_name: 'Freelance',
-    icon: aris,
+    title: 'Full Stack Developer Trainee',
+    company_name: 'PT. Phincon',
+    icon: phincon_logo,
     iconBg: '#383E56',
-    date: 'August 2023',
+    date: 'October 2023',
+    start_date: 'October 2023',
+    end_date: 'December 2023',
+    location: 'Jakarta - Indonesia',
     points: [
-      'Developing websites that comply with the accessibility standards, policies and procedures.',
-      'Developing and managed web accessibility testing plans and processes, including setting up and configuring tools.',
-      'Developing the websites using React.js, Typescript, Tailwind CSS, Framer Motion',
+      'Built several individual front-end projects using JavaScript, React.js, Redux-Saga, SCSS, and MUI with multilingual support.',
+      'Created back-end services using JavaScript, Express.js, MySQL, Sequelize, and Redis.',
+      'Delivered a final full-stack project combining front-end and back-end technologies into a cohesive application.',
+    ],
+  },
+  {
+    id: 2,
+    title: 'Back-End Developer - MyTelkomsel Mobile Application Project',
+    company_name: 'PT. Phincon',
+    start_date: 'January 2024',
+    end_date: 'Present',
+    location: 'Jakarta - Indonesia',
+    icon: phincon_logo,
+    iconBg: '#383E56',
+    date: 'January 2024',
+    points: [
+      'Contributed to the development and maintenance of the MyTelkomsel mobile application backend using a microservices architecture.',
+      'Implemented RESTful APIs using JavaScript (Node.js) with Express.js framework.',
+      'Utilized AWS services, Docker containers, and Kubernetes for scalable and reliable deployment.',
+      'Managed service communication and traffic using Kong API Gateway and Redis for caching and session management.',
+      'Integrated third-party and internal APIs to expand application features and services.',
+      'Wrote comprehensive unit tests using Jest to ensure code quality and reliability.',
+      'Utilized existing CI/CD pipelines configured by the DevOps team using GitLab CI and Jenkins to deploy and test backend services efficiently.',
     ],
   },
 ]
@@ -231,8 +265,24 @@ export const technologies: TTechnologies[] = [
     icon: reactjs,
   },
   {
+    name: 'Next JS',
+    icon: next_js_logo,
+  },
+  {
     name: 'TypeScript',
     icon: typescript,
+  },
+  {
+    name: 'Node JS',
+    icon: nodejs,
+  },
+  {
+    name: 'Nest JS',
+    icon: nest_js_logo,
+  },
+  {
+    name: 'Express JS',
+    icon: express_js_logo,
   },
   {
     name: 'Redux Toolkit',
@@ -243,10 +293,6 @@ export const technologies: TTechnologies[] = [
     icon: tailwind,
   },
   {
-    name: 'Node JS',
-    icon: nodejs,
-  },
-  {
     name: 'MongoDB',
     icon: mongodb,
   },
@@ -255,8 +301,20 @@ export const technologies: TTechnologies[] = [
     icon: mysql,
   },
   {
-    name: 'git',
+    name: 'Redis',
+    icon: redis_logo,
+  },
+  {
+    name: 'Rabbit MQ',
+    icon: rabbitmq_logo,
+  },
+  {
+    name: 'Git',
     icon: git,
+  },
+  {
+    name: 'Docker',
+    icon: docker_logo,
   },
 ]
 
@@ -270,11 +328,11 @@ export const services: TService[] = [
     icon: web,
   },
   {
-    title: 'Frontend Developer',
+    title: 'FrontEnd Developer',
     icon: mobile,
   },
   {
-    title: 'Backend Developer',
+    title: 'BackEnd Developer',
     icon: backend,
   },
 ]
@@ -283,15 +341,16 @@ export type TNavLinks = {
   id: string
   title: string
 }
+
 export const navLinks: TNavLinks[] = [
   {
     id: 'about',
     title: 'About',
   },
-  // {
-  //   id: 'work',
-  //   title: 'Work',
-  // },
+  {
+    id: 'work',
+    title: 'Work',
+  },
   {
     id: 'projects',
     title: 'projects',
@@ -301,3 +360,16 @@ export const navLinks: TNavLinks[] = [
     title: 'Contact',
   },
 ]
+
+export const overviewDescriptionText = `
+  I'm a skilled <strong>Sofware Development</strong> with experience in <strong>JavaScript</strong>,
+  and expertise in frameworks like <strong>React</strong>, <strong>Next.js</strong>, <strong>Nest.js</strong>, <strong>Express.js</strong> and <strong>Node.js</strong>.
+  I am a <em>fast learner</em> and collaborate closely with clients to create efficient,
+  scalable and user-friendly solutions that solve real-world problems. <br /><br />
+  <strong>Let's work together</strong> to make your idea come true!
+`
+export const projectDescriptionText = `
+  The following projects showcase my <strong>skills</strong> and <strong>experience</strong> through real-world examples.
+  Each project includes a <strong>live demo</strong> to explore directly. These works reflect my ability to tackle complex challenges,
+  use various technologies effectively, and build <em>scalable</em> and <em>user-friendly</em> applications.
+`

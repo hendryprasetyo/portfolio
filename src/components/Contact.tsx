@@ -68,10 +68,10 @@ const Contact = () => {
             message: '',
           })
         },
-        err => {
+        () => {
           setLoading(false)
           setOpenModal(true)
-          setModalText(`An error occurred. Please try again later. ${err}`)
+          setModalText(`An error occurred. Please try again later`)
           setModalIcon(<AiOutlineCloseCircle className="text-red-500" />)
         }
       )
@@ -125,6 +125,8 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
+                required
+                pattern="^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$"
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What's your web address?"
@@ -148,9 +150,10 @@ const Contact = () => {
             <button
               disabled={
                 loading ||
-                form.email === '' ||
-                form.name === '' ||
-                form.message === ''
+                !form.name ||
+                !form.email ||
+                !form.message ||
+                !formRef.current?.checkValidity()
               }
               type="submit"
               className="bg-quaternary py-3 px-8 rounded-xl outline-none w-fit text-secondary font-bold shadow-md shadow-primary disabled:bg-quaternary/70 disabled:text-gray-100"

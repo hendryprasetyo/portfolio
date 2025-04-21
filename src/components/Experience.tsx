@@ -11,6 +11,12 @@ import { textVariant } from '../utils/motion'
 import ExperienceCard from './ExperienceCard'
 
 const Experience = () => {
+  const sortedExperiences = experiences.sort((a, b) => {
+    const dateA = new Date(a.start_date)
+    const dateB = new Date(b.start_date)
+    return dateB.getTime() - dateA.getTime()
+  })
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -24,7 +30,7 @@ const Experience = () => {
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline lineColor="#27374D">
-          {experiences.map((experience: TExperiences) => (
+          {sortedExperiences.map((experience: TExperiences) => (
             <ExperienceCard key={experience.id} experience={experience} />
           ))}
         </VerticalTimeline>
