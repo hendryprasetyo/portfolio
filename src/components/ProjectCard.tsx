@@ -2,7 +2,7 @@ import { TProjects, TTagsProjects, projects } from '../constants'
 import { Tilt } from 'react-tilt'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../utils/motion'
-import { AiFillGithub } from 'react-icons/ai'
+import { AiFillGithub, AiOutlineArrowRight } from 'react-icons/ai'
 import React from 'react'
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -16,22 +16,36 @@ const ProjectCard = () => {
             scale: 1,
             speed: 450,
           }}
-          className="bg-quinary p-5 rounded-2xl sm:w-[360px] w-full"
+          className="bg-quinary p-3.5 sm:p-5 rounded-2xl sm:w-[360px] w-full"
         >
           <div className="relative w-full h-[230px]">
             <img
               alt="project_image"
               src={project.image}
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-full object-cover object-top rounded-2xl"
             />
 
-            <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-              <div
-                onClick={() => window.open(project.source_code_link, '_blank')}
-                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-              >
-                <AiFillGithub className="w-1/2 h-1/2 text-white" />
-              </div>
+            <div className="absolute gap-2 inset-0 flex justify-end m-3 card-img_hover">
+              {project.source_code_link ? (
+                <button
+                  type="button"
+                  onClick={() =>
+                    window.open(project.source_code_link, '_blank')
+                  }
+                  className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                >
+                  <AiFillGithub className="w-1/2 h-1/2 text-white" />
+                </button>
+              ) : null}
+              {project.deeplink ? (
+                <button
+                  type="button"
+                  onClick={() => window.open(project.deeplink, '_blank')}
+                  className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                >
+                  <AiOutlineArrowRight className="w-1/2 h-1/2 text-white" />
+                </button>
+              ) : null}
             </div>
           </div>
 

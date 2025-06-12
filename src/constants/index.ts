@@ -3,8 +3,6 @@ import {
   backend,
   web,
   javascript,
-  html,
-  css,
   reactjs,
   redux,
   tailwind,
@@ -13,17 +11,15 @@ import {
   git,
   typescript,
   mysql,
-  aris,
-  ecommerce,
-  portfolio,
-  news,
+  januari_arka,
+  mia,
   phincon_logo,
   nest_js_logo,
   docker_logo,
   express_js_logo,
   redis_logo,
-  rabbitmq_logo,
   next_js_logo,
+  mytsel,
 } from '../assets'
 
 export type TTestimonials = {
@@ -37,11 +33,11 @@ export type TTestimonials = {
 export const testimonials: TTestimonials[] = [
   {
     testimonial:
-      'I thought it would be impossible to make a website as beautiful as I imagined, but Hendry proved me wrong.',
-    name: 'Hermawan',
-    designation: 'UI/UX Design',
-    company: '',
-    image: aris,
+      'Hendry are a *huge* asset to the team! Quick on the draw, sharp with your analysis, and always finding smart solutions—you’ve been key to our success. But the best part? You’re open-minded, easy to work with, and make teamwork smooth *and* fun. Seriously, having you on board is a win! 🚀',
+    name: 'Januari Arka',
+    designation: 'Officer - IT MyTelkomsel and THE Solutions',
+    company: 'PT Telekomunikasi Selular',
+    image: januari_arka,
   },
 ]
 
@@ -56,140 +52,98 @@ export type TProjects = {
   description: string
   tags: TTagsProjects[]
   image: string
-  source_code_link: string
+  source_code_link?: string
+  deeplink?: string
 }
 export const projects: TProjects[] = [
-  // {
-  //   id: 1,
-  //   name: 'GYM',
-  //   description:
-  //     'Robust gym website with advanced security features. For the backend, the Go language was chosen to ensure strong performance and security. Meanwhile, the frontend is built using Next.js 13 with TypeScript, which incorporates modern web development practices for a seamless user experience. The goal is to create a simple yet elegant design that encourages users to comfortably interact with the site for a long time.',
-  //   tags: [
-  //     {
-  //       name: 'next.js',
-  //       color: 'text-black',
-  //     },
-  //     {
-  //       name: 'go',
-  //       color: 'blue-text-gradient',
-  //     },
-  //     {
-  //       name: 'framer-motion',
-  //       color: 'text-orange-500',
-  //     },
-  //     {
-  //       name: 'mysql',
-  //       color: 'text-blue-500',
-  //     },
-  //     {
-  //       name: 'typescript',
-  //       color: 'text-blue-500',
-  //     },
-  //     {
-  //       name: 'react-hook-form',
-  //       color: 'text-pink-500',
-  //     },
-  //     {
-  //       name: 'zod',
-  //       color: 'text-purple-500',
-  //     },
-  //   ],
-  //   image: gym,
-  //   source_code_link: 'https://github.com/hendryprasetyo/news',
-  // },
   {
-    id: 2,
-    name: 'Marketplace Web Site',
+    id: 1,
+    name: 'Outdoor Activity Booking Platform',
     description:
-      'The Marcketplace application I have developed serves both sellers and buyers, enabling users to engage in transactions with a wide and diverse product catalog. It offers detailed product information, images, and ensures user security, along with various other features that enhance user convenience.',
+      'A role-based web application designed to facilitate online booking for various outdoor activities across Indonesia, including hiking, camping, and more. The platform supports three user roles—User, Merchant, and Admin—and features ticket purchasing, activity scheduling, and merchant service management.',
     tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
       {
         name: 'node.js',
         color: 'text-green-600',
       },
       {
-        name: 'express.js',
-        color: 'text-orange-500',
-      },
-      {
-        name: 'mongodb',
-        color: 'green-text-gradient',
-      },
-      {
-        name: 'redux-toolkit',
-        color: 'text-purple-500',
-      },
-      {
-        name: 'tailwindcss',
-        color: 'text-blue-500',
-      },
-      {
-        name: 'formik',
-        color: 'text-red-500',
-      },
-      {
-        name: 'yup',
-        color: 'text-yellow-500',
-      },
-    ],
-    image: ecommerce,
-    source_code_link: 'https://github.com/hendryprasetyo/ecomerce ',
-  },
-  {
-    id: 3,
-    name: 'News',
-    description:
-      'A dynamic news platform that provides users with the convenience to view trending news, equipped with a highly responsive news search feature, enabling users to easily find their desired news articles. Additionally, there is an administrative feature that allows for news creation and website management with a high level of security.',
-    tags: [
-      {
-        name: 'react',
+        name: 'next.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'node.js',
-        color: 'text-green-600',
-      },
-      {
-        name: 'express.js',
+        name: 'nest.js',
         color: 'text-orange-500',
       },
       {
         name: 'mysql',
-        color: 'text-blue-500',
-      },
-    ],
-    image: news,
-    source_code_link: 'https://github.com/hendryprasetyo/news',
-  },
-  {
-    id: 4,
-    name: 'Portfolio',
-    description:
-      "A personal web portfolio with features to send messages through email and WhatsApp. The website's design is intentionally kept minimalistic yet captivating. The aim is to facilitate user exploration, leveraging the simplicity of the design to ensure effortless navigation through the content.",
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
+        color: 'green-text-gradient',
       },
       {
-        name: 'typescript',
-        color: 'text-blue-500',
-      },
-      {
-        name: 'tailwindcss',
+        name: 'rtk query',
         color: 'text-purple-500',
       },
       {
-        name: 'framer-motion',
-        color: 'text-orange-500',
+        name: 'tailwindcss',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'redis',
+        color: 'text-red-500',
+      },
+      {
+        name: 'rabbitmq',
+        color: 'text-yellow-500',
       },
     ],
-    image: portfolio,
-    source_code_link: 'https://github.com/hendryprasetyo/portfolio_aris',
+    image: mia,
+    deeplink: 'https://miaworld.my.id',
+  },
+  {
+    id: 2,
+    name: 'MyTelkomsel Mobile Application',
+    description:
+      'Developed scalable and reliable backend services for the MyTelkomsel app using Node.js and Express in a microservices architecture. Implemented RESTful APIs, integrated internal and third-party services, and ensured high-quality code with Jest testing. Managed deployments using Docker, Jenkins, and Kubernetes, and supported full API testing cycles from SIT to FUT.',
+    tags: [
+      {
+        name: 'node.js',
+        color: 'text-green-600',
+      },
+      {
+        name: 'microservices',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'javascript',
+        color: 'text-orange-500',
+      },
+      {
+        name: 'express.js',
+        color: 'text-red-500',
+      },
+      {
+        name: 'docker',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'aws',
+        color: 'text-orange-500',
+      },
+      {
+        name: 'kubernetes',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'jenkins',
+        color: 'text-black',
+      },
+      {
+        name: 'redis',
+        color: 'text-red-500',
+      },
+    ],
+    image: mytsel,
+    deeplink:
+      'https://play.google.com/store/apps/details?id=com.telkomsel.telkomselcm&hl=id',
   },
 ]
 
@@ -224,10 +178,10 @@ export const experiences: TExperiences[] = [
   },
   {
     id: 2,
-    title: 'Back-End Developer - MyTelkomsel Mobile Application Project',
+    title: 'Back End Developer - MyTelkomsel Mobile Application',
     company_name: 'PT. Phincon',
     start_date: 'January 2024',
-    end_date: 'Present',
+    end_date: 'June 2025',
     location: 'Jakarta - Indonesia',
     icon: phincon_logo,
     iconBg: '#383E56',
@@ -235,11 +189,10 @@ export const experiences: TExperiences[] = [
     points: [
       'Contributed to the development and maintenance of the MyTelkomsel mobile application backend using a microservices architecture.',
       'Implemented RESTful APIs using JavaScript (Node.js) with Express.js framework.',
-      'Utilized AWS services, Docker containers, and Kubernetes for scalable and reliable deployment.',
-      'Managed service communication and traffic using Kong API Gateway and Redis for caching and session management.',
+      'Utilized CI/CD pipelines, Jenkins, Docker containers, and Kubernetes for scalable and reliable deployment.',
       'Integrated third-party and internal APIs to expand application features and services.',
       'Wrote comprehensive unit tests using Jest to ensure code quality and reliability.',
-      'Utilized existing CI/CD pipelines configured by the DevOps team using GitLab CI and Jenkins to deploy and test backend services efficiently.',
+      'Supporting the end-to-end API testing process, from System Integration Testing (SIT) to Functional User Testing (FUT).',
     ],
   },
 ]
@@ -249,16 +202,16 @@ export type TTechnologies = {
 }
 export const technologies: TTechnologies[] = [
   {
-    name: 'HTML 5',
-    icon: html,
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
+    name: 'TypeScript',
+    icon: typescript,
   },
   {
     name: 'JavaScript',
     icon: javascript,
+  },
+  {
+    name: 'Node JS',
+    icon: nodejs,
   },
   {
     name: 'React JS',
@@ -267,14 +220,6 @@ export const technologies: TTechnologies[] = [
   {
     name: 'Next JS',
     icon: next_js_logo,
-  },
-  {
-    name: 'TypeScript',
-    icon: typescript,
-  },
-  {
-    name: 'Node JS',
-    icon: nodejs,
   },
   {
     name: 'Nest JS',
@@ -303,10 +248,6 @@ export const technologies: TTechnologies[] = [
   {
     name: 'Redis',
     icon: redis_logo,
-  },
-  {
-    name: 'Rabbit MQ',
-    icon: rabbitmq_logo,
   },
   {
     name: 'Git',
