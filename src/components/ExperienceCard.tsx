@@ -6,6 +6,7 @@ const VerticalTimelineElement = RawVerticalTimelineElement as unknown as FC<any>
 
 import { TExperiences } from '../constants'
 import { memo } from 'react'
+import LazyImage from '../utils/LazyImage'
 const ExperienceCard = memo(({ experience }: { experience: TExperiences }) => {
   const experianceDate =
     experience.start_date === experience.end_date
@@ -21,9 +22,13 @@ const ExperienceCard = memo(({ experience }: { experience: TExperiences }) => {
       date={experianceDate}
       icon={
         <div className="flex justify-center items-center w-full h-full overflow-hidden rounded-full border">
-          <img
+          <LazyImage
             alt={experience.company_name}
+            titleImage={experience.company_name}
             src={experience.icon}
+            placeholderSrc={experience.icon}
+            height={400}
+            width={400}
             className="w-full h-full object-contain"
           />
         </div>

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../utils/motion'
 import { AiFillGithub, AiOutlineArrowRight } from 'react-icons/ai'
 import React from 'react'
+import LazyImage from '../utils/LazyImage'
 
 // eslint-disable-next-line react-refresh/only-export-components
 const ProjectCard = () => {
@@ -19,9 +20,13 @@ const ProjectCard = () => {
           className="bg-quinary p-3.5 sm:p-5 rounded-2xl sm:w-[360px] w-full"
         >
           <div className="relative w-full h-[230px]">
-            <img
-              alt="project_image"
+            <LazyImage
+              placeholderSrc={project.image_blur}
+              titleImage={project.name}
+              alt={project.name}
               src={project.image}
+              height={project.height_image}
+              width={project.width_image}
               className="w-full h-full object-cover object-top rounded-2xl"
             />
 

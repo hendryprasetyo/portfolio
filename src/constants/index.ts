@@ -20,6 +20,12 @@ import {
   redis_logo,
   next_js_logo,
   mytsel,
+  januari_arka_blur,
+  mytsel_blur,
+  mia_blur,
+  certificate_harisenin,
+  certificate_udemy_mern,
+  certificate_vsga_junior_web_dev,
 } from '../assets'
 
 export type TTestimonials = {
@@ -28,6 +34,7 @@ export type TTestimonials = {
   designation: string
   company: string
   image: string
+  image_blur: string
 }
 
 export const testimonials: TTestimonials[] = [
@@ -38,6 +45,7 @@ export const testimonials: TTestimonials[] = [
     designation: 'Officer - IT MyTelkomsel and THE Solutions',
     company: 'PT Telekomunikasi Selular',
     image: januari_arka,
+    image_blur: januari_arka_blur,
   },
 ]
 
@@ -48,10 +56,13 @@ export type TTagsProjects = {
 
 export type TProjects = {
   id: number
+  height_image: number
+  width_image: number
   name: string
   description: string
   tags: TTagsProjects[]
   image: string
+  image_blur: string
   source_code_link?: string
   deeplink?: string
 }
@@ -67,12 +78,16 @@ export const projects: TProjects[] = [
         color: 'text-green-600',
       },
       {
-        name: 'next.js',
-        color: 'blue-text-gradient',
+        name: 'Typescipt',
+        color: 'text-blue-500',
       },
       {
         name: 'nest.js',
         color: 'text-orange-500',
+      },
+      {
+        name: 'next.js',
+        color: 'blue-text-gradient',
       },
       {
         name: 'mysql',
@@ -96,6 +111,9 @@ export const projects: TProjects[] = [
       },
     ],
     image: mia,
+    image_blur: mia_blur,
+    width_image: 3360,
+    height_image: 2024,
     deeplink: 'https://miaworld.my.id',
   },
   {
@@ -142,6 +160,9 @@ export const projects: TProjects[] = [
       },
     ],
     image: mytsel,
+    image_blur: mytsel_blur,
+    width_image: 738,
+    height_image: 1600,
     deeplink:
       'https://play.google.com/store/apps/details?id=com.telkomsel.telkomselcm&hl=id',
   },
@@ -181,7 +202,7 @@ export const experiences: TExperiences[] = [
     title: 'Back End Developer - MyTelkomsel Mobile Application',
     company_name: 'PT. Phincon',
     start_date: 'January 2024',
-    end_date: 'June 2025',
+    end_date: 'July 2025',
     location: 'Jakarta - Indonesia',
     icon: phincon_logo,
     iconBg: '#383E56',
@@ -303,8 +324,8 @@ export const navLinks: TNavLinks[] = [
 ]
 
 export const overviewDescriptionText = `
-  I'm a skilled <strong>Sofware Development</strong> with experience in <strong>JavaScript</strong>,
-  and expertise in frameworks like <strong>React</strong>, <strong>Next.js</strong>, <strong>Nest.js</strong>, <strong>Express.js</strong> and <strong>Node.js</strong>.
+  I'm a skilled <strong>Sofware Development</strong> with experience in <strong>JavaScript</strong> and <strong>TypeScript</strong>,
+  and expertise in frameworks and library like <strong>React</strong>, <strong>Next.js</strong>, <strong>Nest.js</strong>, <strong>Express.js</strong> and <strong>Node.js</strong>.
   I am a <em>fast learner</em> and collaborate closely with clients to create efficient,
   scalable and user-friendly solutions that solve real-world problems. <br /><br />
   <strong>Let's work together</strong> to make your idea come true!
@@ -314,3 +335,18 @@ export const projectDescriptionText = `
   Each project includes a <strong>live demo</strong> to explore directly. These works reflect my ability to tackle complex challenges,
   use various technologies effectively, and build <em>scalable</em> and <em>user-friendly</em> applications.
 `
+
+export const certification = [
+  {
+    title: 'Full Stack Developer',
+    image: certificate_harisenin,
+  },
+  {
+    title: 'MERN Stack Developer',
+    image: certificate_udemy_mern,
+  },
+  {
+    title: 'Junior Web Developer',
+    image: certificate_vsga_junior_web_dev,
+  },
+]

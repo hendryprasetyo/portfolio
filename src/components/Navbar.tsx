@@ -27,8 +27,10 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
-        scrolled ? 'bg-primary' : 'bg-transparent'
+      } w-full flex items-center py-2 lg:py-3 fixed top-0 z-20 ${
+        scrolled
+          ? 'bg-white/20 backdrop-blur-md shadow-md transition-all duration-300'
+          : 'bg-transparent transition-all duration-300'
       }`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
@@ -43,9 +45,6 @@ const Navbar = () => {
           <Suspense fallback={<LoadingSpinner />}>
             <LazyLogo />
           </Suspense>
-          <p className="text-black-100 text-[20px] font-bold cursor-pointer flex ">
-            Hendry Prasetyo
-          </p>
         </a>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">

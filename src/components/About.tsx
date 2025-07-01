@@ -5,7 +5,7 @@ import { styles } from '../styles'
 import { SectionWrapper } from '../hoc'
 import { fadeIn, textVariant } from '../utils/motion'
 import AboutCard from './AboutCard'
-import { overviewDescriptionText } from '../constants'
+import { overviewDescriptionText, services, TService } from '../constants'
 
 const About = () => {
   return (
@@ -20,8 +20,11 @@ const About = () => {
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         dangerouslySetInnerHTML={{ __html: overviewDescriptionText }}
       />
-
-      <AboutCard />
+      <section className="mt-20 flex flex-wrap gap-10">
+        {services.map((service: TService, index: number) => (
+          <AboutCard key={service.title} index={index} data={service} />
+        ))}
+      </section>
     </>
   )
 }

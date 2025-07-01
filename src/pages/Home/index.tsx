@@ -5,7 +5,9 @@ import {
   Feedbacks,
   Projects,
   Tech,
+  Cetification,
 } from '../../components'
+
 
 const Home = () => {
   return (
@@ -13,6 +15,7 @@ const Home = () => {
       <About />
       <Tech />
       <Experience />
+      <Cetification />
       <Projects />
       <Feedbacks />
       <Contact />

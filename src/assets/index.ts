@@ -3,11 +3,14 @@ import mobile from './mobile.png'
 import web from './web.png'
 
 import januari_arka from './januari_arka_pp.jpeg'
+import januari_arka_blur from './januari_arka_pp_blur.jpg'
 
 import phincon_logo from './phincon_logo.png'
 
 import mia from './projects/mia.png'
+import mia_blur from './projects/mia_home_blur.jpg'
 import mytsel from './projects/utility_indihome.jpeg'
+import mytsel_blur from './projects/utility_indihome_blur.jpg'
 
 import css from './tech/css.png'
 import git from './tech/git.png'
@@ -26,6 +29,11 @@ import express_js_logo from './tech/express-js.svg'
 import redis_logo from './tech/redis_logo.svg'
 import rabbitmq_logo from './tech/rabbitmq_logo.svg'
 import next_js_logo from './tech/nextjs_logo.svg'
+
+import certificate_harisenin from './harisenin.png'
+import certificate_udemy_mern from './Udemy_certification_mern_stack.jpg'
+import certificate_vsga_junior_web_dev from './vsga_junior_web_dev.png'
+
 export {
   januari_arka,
   backend,
@@ -51,4 +59,10 @@ export {
   rabbitmq_logo,
   next_js_logo,
   mytsel,
+  januari_arka_blur,
+  mia_blur,
+  mytsel_blur,
+  certificate_harisenin,
+  certificate_udemy_mern,
+  certificate_vsga_junior_web_dev,
 }
