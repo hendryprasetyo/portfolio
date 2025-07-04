@@ -5,6 +5,7 @@ import { fadeIn } from '../utils/motion'
 import { AiFillGithub, AiOutlineArrowRight } from 'react-icons/ai'
 import React from 'react'
 import LazyImage from '../utils/LazyImage'
+import { FormattedMessage } from 'react-intl'
 
 // eslint-disable-next-line react-refresh/only-export-components
 const ProjectCard = () => {
@@ -19,7 +20,7 @@ const ProjectCard = () => {
           }}
           className="bg-quinary p-3.5 sm:p-5 rounded-2xl sm:w-[360px] w-full"
         >
-          <div className="relative w-full h-[230px]">
+          <div className="relative w-full h-full">
             <LazyImage
               placeholderSrc={project.image_blur}
               titleImage={project.name}
@@ -59,7 +60,7 @@ const ProjectCard = () => {
               {project.name}
             </h3>
             <p className="mt-2 text-tertiary text-[14px]">
-              {project.description}
+              <FormattedMessage id={project.description} />
             </p>
           </div>
 

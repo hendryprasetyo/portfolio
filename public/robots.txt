@@ -1,6 +1,6 @@
-# Mengizinkan semua mesin pencari untuk merayapi seluruh situs
 User-Agent: *
+Disallow: /api/
+
 Allow: /
 
-# Lokasi sitemap XML
 Sitemap: https://hendryprasetyo.github.io/portfolio/sitemap.xml

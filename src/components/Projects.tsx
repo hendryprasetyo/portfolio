@@ -5,14 +5,18 @@ import { SectionWrapper } from '../hoc'
 import { fadeIn, textVariant } from '../utils/motion'
 import ProjectCard from './ProjectCard'
 import { projectDescriptionText } from '../constants'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 const Projects = () => {
+  const intl = useIntl()
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} text-tertiary`}>My work</p>
+        <p className={`${styles.sectionSubText} text-tertiary`}>
+          <FormattedMessage id="project_subtitle" />
+        </p>
         <h2 className={`${styles.sectionHeadText} text-secondary`}>
-          Projects.
+          <FormattedMessage id="project_head_title" />
         </h2>
       </motion.div>
 
@@ -20,7 +24,9 @@ const Projects = () => {
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-3 text-tertiary text-[17px] max-w-3xl leading-[30px]"
-          dangerouslySetInnerHTML={{ __html: projectDescriptionText }}
+          dangerouslySetInnerHTML={{
+            __html: intl.formatMessage({ id: projectDescriptionText }),
+          }}
         />
       </div>
 

@@ -3,6 +3,9 @@ import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
 import { styles } from '../styles'
 import { navLinks, TNavLinks } from '../constants'
 import LoadingSpinner from './LoadingSpinner'
+import LocaleSwitcher from './LocaleSelectore'
+import { FormattedMessage } from 'react-intl'
+
 const LazyLogo = lazy(() => import('./LogoNavbar'))
 const Navbar = () => {
   const [active, setActive] = useState<string>('')
@@ -46,8 +49,7 @@ const Navbar = () => {
             <LazyLogo />
           </Suspense>
         </a>
-
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden sm:flex flex-row gap-10 justify-center items-center">
           {navLinks.map((nav: TNavLinks) => (
             <li
               key={nav.id}
@@ -56,23 +58,29 @@ const Navbar = () => {
               } hover:text-secondary text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`#${nav.id}`}>
+                <FormattedMessage id={nav.title} />
+              </a>
             </li>
           ))}
+          <li>
+            <LocaleSwitcher />
+          </li>
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="sm:hidden flex flex-1 justify-end items-center gap-4">
           <button
             className="text-secondary text-xl"
             onClick={() => setToggle(!toggle)}
           >
             {toggle ? <AiOutlineClose /> : <AiOutlineMenu />}
           </button>
+          <LocaleSwitcher />
 
           <div
             className={`${
               !toggle ? 'hidden' : 'flex'
-            } p-6 bg-quinary absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 bg-quinary absolute top-14 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map(nav => (
@@ -86,7 +94,9 @@ const Navbar = () => {
                     setActive(nav.title)
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a href={`#${nav.id}`}>
+                    <FormattedMessage id={nav.title} />
+                  </a>
                 </li>
               ))}
             </ul>

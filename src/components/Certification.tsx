@@ -6,6 +6,7 @@ import { SectionWrapper } from '../hoc'
 import { certification } from '../constants'
 import { Tilt } from 'react-tilt'
 import LazyImage from '../utils/LazyImage'
+import { FormattedMessage } from 'react-intl'
 
 type TCertification = {
   image: string
@@ -41,14 +42,18 @@ const CertificateCard: React.FC<CertificateCardProps> = ({ index, data }) => (
   </Tilt>
 )
 
-const Cetification = () => {
+const Certification = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My Certification</p>
-        <h2 className={styles.sectionHeadText}>Certification.</h2>
+        <p className={styles.sectionSubText}>
+          <FormattedMessage id="certification_subtitle" />
+        </p>
+        <h2 className={styles.sectionHeadText}>
+          <FormattedMessage id="certification_head_title" />
+        </h2>
       </motion.div>
-      <section className="mt-20 flex flex-wrap gap-10 xl:gap-20">
+      <section className="mt-20 justify-center md:justify-start flex flex-wrap gap-10 xl:gap-20">
         {certification.map((certificate, index: number) => (
           <CertificateCard
             key={certificate.title}
@@ -61,4 +66,4 @@ const Cetification = () => {
   )
 }
 
-export default SectionWrapper(Cetification, 'Certification')
+export default SectionWrapper(Certification, 'Certification')

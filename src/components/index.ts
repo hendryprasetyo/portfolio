@@ -8,7 +8,7 @@ import Projects from './Projects'
 import Feedbacks from './Feedbacks'
 import Contact from './Contact'
 import Footer from './Footer'
-import Cetification from './Cetification'
+import Certification from './Certification'
 import CanvasLoader from './Loader'
 
 export {
@@ -24,5 +24,5 @@ export {
   CanvasLoader,
   EarthCanvas,
   BallCanvas,
-  Cetification,
+  Certification,
 }

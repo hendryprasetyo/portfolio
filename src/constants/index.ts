@@ -26,6 +26,8 @@ import {
   certificate_harisenin,
   certificate_udemy_mern,
   certificate_vsga_junior_web_dev,
+  escrow,
+  escrow_blur,
 } from '../assets'
 
 export type TTestimonials = {
@@ -39,8 +41,7 @@ export type TTestimonials = {
 
 export const testimonials: TTestimonials[] = [
   {
-    testimonial:
-      'Hendry are a *huge* asset to the team! Quick on the draw, sharp with your analysis, and always finding smart solutions—you’ve been key to our success. But the best part? You’re open-minded, easy to work with, and make teamwork smooth *and* fun. Seriously, having you on board is a win! 🚀',
+    testimonial: 'testimonial_januari_arka',
     name: 'Januari Arka',
     designation: 'Officer - IT MyTelkomsel and THE Solutions',
     company: 'PT Telekomunikasi Selular',
@@ -66,15 +67,15 @@ export type TProjects = {
   source_code_link?: string
   deeplink?: string
 }
+
 export const projects: TProjects[] = [
   {
     id: 1,
     name: 'Outdoor Activity Booking Platform',
-    description:
-      'A role-based web application designed to facilitate online booking for various outdoor activities across Indonesia, including hiking, camping, and more. The platform supports three user roles—User, Merchant, and Admin—and features ticket purchasing, activity scheduling, and merchant service management.',
+    description: 'project_mia_description',
     tags: [
       {
-        name: 'node.js',
+        name: 'Node.js',
         color: 'text-green-600',
       },
       {
@@ -82,31 +83,36 @@ export const projects: TProjects[] = [
         color: 'text-blue-500',
       },
       {
-        name: 'nest.js',
+        name: 'Nest.js',
         color: 'text-orange-500',
       },
       {
-        name: 'next.js',
+        name: 'Next.js',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mysql',
+        name: 'MYSQL',
         color: 'green-text-gradient',
       },
       {
-        name: 'rtk query',
+        name: 'RTK Query',
         color: 'text-purple-500',
       },
       {
-        name: 'tailwindcss',
+        name: 'Tailwindcss',
         color: 'text-blue-500',
+      },
+      {
+        name: 'rabbitmq',
+        color: 'text-yellow-500',
       },
       {
         name: 'redis',
         color: 'text-red-500',
       },
+
       {
-        name: 'rabbitmq',
+        name: 'RestAPI',
         color: 'text-yellow-500',
       },
     ],
@@ -119,52 +125,119 @@ export const projects: TProjects[] = [
   {
     id: 2,
     name: 'MyTelkomsel Mobile Application',
-    description:
-      'Developed scalable and reliable backend services for the MyTelkomsel app using Node.js and Express in a microservices architecture. Implemented RESTful APIs, integrated internal and third-party services, and ensured high-quality code with Jest testing. Managed deployments using Docker, Jenkins, and Kubernetes, and supported full API testing cycles from SIT to FUT.',
+    description: 'project_mytsel_description',
     tags: [
       {
-        name: 'node.js',
+        name: 'Node.js',
         color: 'text-green-600',
       },
       {
-        name: 'microservices',
+        name: 'Microservices',
         color: 'text-blue-500',
       },
       {
-        name: 'javascript',
+        name: 'Javascript',
         color: 'text-orange-500',
       },
       {
-        name: 'express.js',
+        name: 'Express.js',
         color: 'text-red-500',
       },
       {
-        name: 'docker',
+        name: 'Docker',
         color: 'text-blue-500',
       },
       {
-        name: 'aws',
+        name: 'AWS',
         color: 'text-orange-500',
       },
       {
-        name: 'kubernetes',
+        name: 'Kubernetes',
         color: 'text-blue-500',
       },
       {
-        name: 'jenkins',
+        name: 'Jenkins',
         color: 'text-black',
       },
       {
-        name: 'redis',
+        name: 'Redis',
         color: 'text-red-500',
+      },
+      {
+        name: 'Splunk',
+        color: 'text-green-600',
+      },
+      {
+        name: 'RestAPI',
+        color: 'text-yellow-500',
       },
     ],
     image: mytsel,
     image_blur: mytsel_blur,
     width_image: 738,
     height_image: 1600,
-    deeplink:
-      'https://play.google.com/store/apps/details?id=com.telkomsel.telkomselcm&hl=id',
+    deeplink: 'https://www.telkomsel.com/mytelkomsel#feature-indihome-mytsel',
+  },
+  {
+    id: 3,
+    name: 'Escrow Bussines Web Platform',
+    description: 'project_escrow_description',
+
+    tags: [
+      {
+        name: 'Node.js',
+        color: 'text-green-600',
+      },
+      {
+        name: 'React.js',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'Typescript',
+        color: 'text-orange-500',
+      },
+      {
+        name: 'Tailwindcss',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'Nest.js',
+        color: 'text-red-500',
+      },
+      {
+        name: 'Docker',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'Redis',
+        color: 'text-orange-500',
+      },
+      {
+        name: 'Go (Golang)',
+        color: 'text-blue-500',
+      },
+      {
+        name: 'MYSQL',
+        color: 'text-black',
+      },
+      {
+        name: 'Rabbit MQ',
+        color: 'text-red-500',
+      },
+      {
+        name: 'NGINX',
+        color: 'text-green-600',
+      },
+      {
+        name: 'RestAPI',
+        color: 'text-yellow-500',
+      },
+    ],
+    image: escrow,
+    image_blur: escrow_blur,
+    width_image: 738,
+    height_image: 1600,
+    deeplink: 'https://arisstore28.online',
   },
 ]
 
@@ -180,6 +253,7 @@ export type TExperiences = {
   location: string
   points: string[]
 }
+
 export const experiences: TExperiences[] = [
   {
     id: 1,
@@ -187,40 +261,42 @@ export const experiences: TExperiences[] = [
     company_name: 'PT. Phincon',
     icon: phincon_logo,
     iconBg: '#383E56',
-    date: 'October 2023',
-    start_date: 'October 2023',
-    end_date: 'December 2023',
+    date: 'experience_phincon_traine_fullstack_start_date',
+    start_date: 'experience_phincon_traine_fullstack_start_date',
+    end_date: 'experience_phincon_traine_fullstack_end_date',
     location: 'Jakarta - Indonesia',
     points: [
-      'Built several individual front-end projects using JavaScript, React.js, Redux-Saga, SCSS, and MUI with multilingual support.',
-      'Created back-end services using JavaScript, Express.js, MySQL, Sequelize, and Redis.',
-      'Delivered a final full-stack project combining front-end and back-end technologies into a cohesive application.',
+      'experience_phincon_traine_fullstack_point_one',
+      'experience_phincon_traine_fullstack_point_two',
+      'experience_phincon_traine_fullstack_point_three',
     ],
   },
   {
     id: 2,
     title: 'Back End Developer - MyTelkomsel Mobile Application',
     company_name: 'PT. Phincon',
-    start_date: 'January 2024',
-    end_date: 'July 2025',
+    start_date: 'experience_phincon_fullstack_start_date',
+    end_date: 'experience_phincon_fullstack_end_date',
     location: 'Jakarta - Indonesia',
     icon: phincon_logo,
     iconBg: '#383E56',
-    date: 'January 2024',
+    date: 'experience_phincon_fullstack_start_date',
     points: [
-      'Contributed to the development and maintenance of the MyTelkomsel mobile application backend using a microservices architecture.',
-      'Implemented RESTful APIs using JavaScript (Node.js) with Express.js framework.',
-      'Utilized CI/CD pipelines, Jenkins, Docker containers, and Kubernetes for scalable and reliable deployment.',
-      'Integrated third-party and internal APIs to expand application features and services.',
-      'Wrote comprehensive unit tests using Jest to ensure code quality and reliability.',
-      'Supporting the end-to-end API testing process, from System Integration Testing (SIT) to Functional User Testing (FUT).',
+      'experience_phincon_fullstack_point_one',
+      'experience_phincon_fullstack_point_two',
+      'experience_phincon_fullstack_point_three',
+      'experience_phincon_fullstack_point_four',
+      'experience_phincon_fullstack_point_five',
+      'experience_phincon_fullstack_point_six',
     ],
   },
 ]
+
 export type TTechnologies = {
   name: string
   icon: string
 }
+
 export const technologies: TTechnologies[] = [
   {
     name: 'TypeScript',
@@ -284,6 +360,7 @@ export type TService = {
   title: string
   icon: string
 }
+
 export const services: TService[] = [
   {
     title: 'Full-Stack Web Developer',
@@ -307,34 +384,24 @@ export type TNavLinks = {
 export const navLinks: TNavLinks[] = [
   {
     id: 'about',
-    title: 'About',
+    title: 'nav_link_about_title',
   },
   {
     id: 'work',
-    title: 'Work',
+    title: 'nav_link_work_title',
   },
   {
     id: 'projects',
-    title: 'projects',
+    title: 'nav_link_project_title',
   },
   {
     id: 'contact',
-    title: 'Contact',
+    title: 'nav_link_contact_title',
   },
 ]
 
-export const overviewDescriptionText = `
-  I'm a skilled <strong>Sofware Development</strong> with experience in <strong>JavaScript</strong> and <strong>TypeScript</strong>,
-  and expertise in frameworks and library like <strong>React</strong>, <strong>Next.js</strong>, <strong>Nest.js</strong>, <strong>Express.js</strong> and <strong>Node.js</strong>.
-  I am a <em>fast learner</em> and collaborate closely with clients to create efficient,
-  scalable and user-friendly solutions that solve real-world problems. <br /><br />
-  <strong>Let's work together</strong> to make your idea come true!
-`
-export const projectDescriptionText = `
-  The following projects showcase my <strong>skills</strong> and <strong>experience</strong> through real-world examples.
-  Each project includes a <strong>live demo</strong> to explore directly. These works reflect my ability to tackle complex challenges,
-  use various technologies effectively, and build <em>scalable</em> and <em>user-friendly</em> applications.
-`
+export const overviewDescriptionText = 'about_description_html_text'
+export const projectDescriptionText = 'project_description_html_text'
 
 export const certification = [
   {

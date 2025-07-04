@@ -9,6 +9,7 @@ import { slideIn } from '../utils/motion'
 const Modal = lazy(() => import('./Modal'))
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai'
 import LoadingSpinner from './LoadingSpinner'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 type FormState = {
   name: string
@@ -27,6 +28,7 @@ const Contact = () => {
   const [openModal, setOpenModal] = useState(false)
   const [modalText, setModalText] = useState('')
   const [modalIcon, setModalIcon] = useState<React.ReactNode | null>(null)
+  const intl = useIntl()
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -100,9 +102,11 @@ const Contact = () => {
               'sm:text-[18px] text-[14px] text-tertiary uppercase tracking-wider'
             }
           >
-            Get in touch
+            <FormattedMessage id="contact_subtitle" />
           </p>
-          <h3 className={styles.sectionHeadText}>Contact.</h3>
+          <h3 className={styles.sectionHeadText}>
+            <FormattedMessage id="contact_head_title" />
+          </h3>
 
           <form
             ref={formRef}
@@ -110,18 +114,24 @@ const Contact = () => {
             className="mt-5 flex flex-col gap-8"
           >
             <label className="flex flex-col">
-              <span className="text-tertiary font-medium mb-4">Your Name</span>
+              <span className="text-tertiary font-medium mb-4">
+                <FormattedMessage id="contact_title_form_your_name" />
+              </span>
               <input
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your good name?"
+                placeholder={intl.formatMessage({
+                  id: 'contact_placeholder_form_your_name',
+                })}
                 className="bg-quinary py-4 px-6 placeholder:text-tertiary text-tertiary rounded-lg outline-none border-2 border-tertiary font-medium"
               />
             </label>
             <label className="flex flex-col">
-              <span className="text-tertiary font-medium mb-4">Your email</span>
+              <span className="text-tertiary font-medium mb-4">
+                <FormattedMessage id="contact_title_form_your_email" />
+              </span>
               <input
                 type="email"
                 name="email"
@@ -129,20 +139,24 @@ const Contact = () => {
                 pattern="^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your web address?"
+                placeholder={intl.formatMessage({
+                  id: 'contact_placeholder_form_your_email',
+                })}
                 className="bg-quinary border-2 border-tertiary py-4 px-6 placeholder:text-tertiary text-tertiary rounded-lg outline-none font-medium"
               />
             </label>
             <label className="flex flex-col">
               <span className="text-tertiary font-medium mb-4">
-                Your Message
+                <FormattedMessage id="contact_title_form_your_message" />
               </span>
               <textarea
                 rows={7}
                 name="message"
                 value={form.message}
                 onChange={handleChange}
-                placeholder="What you want to say?"
+                placeholder={intl.formatMessage({
+                  id: 'contact_placeholder_form_your_message',
+                })}
                 className="bg-quinary py-4 px-6 placeholder:text-tertiary text-tertiary rounded-lg outline-none border-2 border-tertiary font-medium"
               />
             </label>
@@ -158,7 +172,11 @@ const Contact = () => {
               type="submit"
               className="bg-quaternary py-3 px-8 rounded-xl outline-none w-fit text-secondary font-bold shadow-md shadow-primary disabled:bg-quaternary/70 disabled:text-gray-100"
             >
-              {loading ? <LoadingSpinner /> : 'Send'}
+              {loading ? (
+                <LoadingSpinner />
+              ) : (
+                <FormattedMessage id="contact_text_btn_form_submit" />
+              )}
             </button>
           </form>
         </motion.div>

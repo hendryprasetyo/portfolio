@@ -10,6 +10,7 @@ import { textVariant } from '../utils/motion'
 import ExperienceCard from './ExperienceCard'
 import { VerticalTimeline as RawVerticalTimeline } from 'react-vertical-timeline-component'
 import type { FC } from 'react'
+import { FormattedMessage } from 'react-intl'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const VerticalTimeline = RawVerticalTimeline as unknown as FC<any>
@@ -24,10 +25,10 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
+          <FormattedMessage id="experience_subtitle" />
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+          <FormattedMessage id="experience_head_title" />
         </h2>
       </motion.div>
 

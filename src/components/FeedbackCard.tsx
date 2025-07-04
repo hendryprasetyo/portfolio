@@ -3,6 +3,7 @@ import LazyImage from '../utils/LazyImage'
 import { fadeIn } from '../utils/motion'
 import { motion } from 'framer-motion'
 import { TTestimonials } from '../constants'
+import { FormattedMessage } from 'react-intl'
 
 interface IFeedbackCard {
   index: number
@@ -19,7 +20,9 @@ const FeedbackCard = memo(({ index, data }: IFeedbackCard) => {
         <span className="text-[48px] font-black text-white leading-none">
           “
         </span>
-        <span className="tracking-wider">{testimonial}</span>
+        <span className="tracking-wider">
+          <FormattedMessage id={testimonial} />
+        </span>
       </blockquote>
       <figcaption className="mt-7 flex justify-between items-center gap-1">
         <div className="flex-1 flex flex-col">

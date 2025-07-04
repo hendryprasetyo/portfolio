@@ -10,7 +10,9 @@ import { Link } from 'react-router-dom'
 import { BsLinkedin } from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/ai'
 import LoadingSpinner from './LoadingSpinner'
+import { FormattedMessage, useIntl } from 'react-intl'
 const Hero = memo(() => {
+  const intl = useIntl()
   const [isDownloading, setIsDownloading] = useState(false)
 
   const handleDownloadCV = async () => {
@@ -52,6 +54,7 @@ const Hero = memo(() => {
     },
   ]
 
+  const typewriterStrings = [intl.formatMessage({ id: 'hero_typewriter_text' })]
   return (
     <>
       {isDownloading && (
@@ -70,12 +73,13 @@ const Hero = memo(() => {
 
           <div>
             <h1 className={`${styles.heroHeadText} text-black-200`}>
-              Hi, I'm <span className="text-[#915EFF]">Hendry Prasetyo</span>
+              <FormattedMessage id="hero_head_title" />{' '}
+              <span className="text-[#915EFF]">Hendry Prasetyo</span>
             </h1>
             <div className={`${styles.heroSubText} mt-2 text-black-100`}>
               <Typewriter
                 options={{
-                  strings: ['I am a full stack web developer'],
+                  strings: typewriterStrings,
                   autoStart: true,
                   loop: true,
                   deleteSpeed: 100,
@@ -122,7 +126,11 @@ const Hero = memo(() => {
                     : 'border-[#915EFF] text-[#915EFF] hover:bg-[#915EFF] hover:text-white'
                 }`}
               >
-                {isDownloading ? 'Downloading...' : 'Download CV'}
+                {isDownloading ? (
+                  <FormattedMessage id="hero_download__loading_cv_text" />
+                ) : (
+                  <FormattedMessage id="hero_download_cv_text" />
+                )}
               </button>
             </div>
           </div>

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import { FaGithub } from 'react-icons/fa'
 import { BsLinkedin } from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/ai'
+import { navLinks } from '../constants'
+import { FormattedMessage } from 'react-intl'
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
@@ -23,30 +25,16 @@ const Footer = () => {
             Home
           </a>
         </li>
-        <li>
-          <a
-            className="text-tertiary hover:text-secondary hover:font-medium transition"
-            href="#about"
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-tertiary hover:text-secondary hover:font-medium transition"
-            href="#projects"
-          >
-            Projects
-          </a>
-        </li>
-        <li>
-          <a
-            className="text-tertiary hover:text-secondary hover:font-medium transition"
-            href="#contact"
-          >
-            Contact
-          </a>
-        </li>
+        {navLinks.map(nav => (
+          <li key={nav.id}>
+            <a
+              className="text-tertiary hover:text-secondary hover:font-medium transition"
+              href={`#${nav.id}`}
+            >
+              <FormattedMessage id={nav.title} />
+            </a>
+          </li>
+        ))}
       </ul>
 
       <div className="flex justify-center gap-[1rem] my-[2rem]">
@@ -75,7 +63,7 @@ const Footer = () => {
 
       <div className="mb-[4rem] text-secondary">
         <small>
-          &copy; {currentYear} Hendry Prasetyo. All rights reserved.
+          &copy; {currentYear} <FormattedMessage id="footer_text" />
         </small>
       </div>
     </footer>

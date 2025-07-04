@@ -5,12 +5,17 @@ import web from './web.png'
 import januari_arka from './januari_arka_pp.jpeg'
 import januari_arka_blur from './januari_arka_pp_blur.jpg'
 
+import id_flag from './indonesian-flag.svg'
+import en_flag from './usa-flag.svg'
+
 import phincon_logo from './phincon_logo.png'
 
-import mia from './projects/mia.png'
-import mia_blur from './projects/mia_home_blur.jpg'
-import mytsel from './projects/utility_indihome.jpeg'
-import mytsel_blur from './projects/utility_indihome_blur.jpg'
+import mia from './projects/mia-mockups-all-device.png'
+import mia_blur from './projects/mia-mockups-all-device-blur.jpg'
+import mytsel from './projects/mytsel-mockups.png'
+import mytsel_blur from './projects/mytsel-mockups-blur.jpg'
+import escrow from './projects/rekber-mocups-all-device.png'
+import escrow_blur from './projects/rekber-mocups-all-device-blur.jpg'
 
 import css from './tech/css.png'
 import git from './tech/git.png'
@@ -65,4 +70,8 @@ export {
   certificate_harisenin,
   certificate_udemy_mern,
   certificate_vsga_junior_web_dev,
+  escrow,
+  escrow_blur,
+  id_flag,
+  en_flag,
 }

@@ -5,6 +5,7 @@ import { SectionWrapper } from '../hoc'
 import { textVariant } from '../utils/motion'
 import { testimonials } from '../constants'
 import FeedbackCard from './FeedbackCard'
+import { FormattedMessage } from 'react-intl'
 
 const Feedbacks = () => {
   return (
@@ -13,8 +14,12 @@ const Feedbacks = () => {
         className={`bg-quinary rounded-t-2xl rounded-b-[30px] ${styles.padding} md:h-[300px] h-[200px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          <p className={styles.sectionSubText}>
+            <FormattedMessage id="testimonial_subtitle" />
+          </p>
+          <h2 className={styles.sectionHeadText}>
+            <FormattedMessage id="testimonial_head_title" />
+          </h2>
         </motion.div>
       </div>
       <div

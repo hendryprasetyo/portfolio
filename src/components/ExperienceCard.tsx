@@ -7,11 +7,17 @@ const VerticalTimelineElement = RawVerticalTimelineElement as unknown as FC<any>
 import { TExperiences } from '../constants'
 import { memo } from 'react'
 import LazyImage from '../utils/LazyImage'
+import { FormattedMessage, useIntl } from 'react-intl'
 const ExperienceCard = memo(({ experience }: { experience: TExperiences }) => {
+  const intl = useIntl()
   const experianceDate =
     experience.start_date === experience.end_date
-      ? experience.start_date
-      : `${experience.start_date} - ${experience.end_date}`
+      ? intl.formatMessage({
+          id: experience.start_date,
+        })
+      : `${intl.formatMessage({
+          id: experience.start_date,
+        })} - ${intl.formatMessage({ id: experience.end_date })}`
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -52,7 +58,7 @@ const ExperienceCard = memo(({ experience }: { experience: TExperiences }) => {
             key={point.length}
             className="text-secondary-100 text-[14px] pl-1 tracking-wider"
           >
-            {point}
+            <FormattedMessage id={point} />
           </li>
         ))}
       </ul>
