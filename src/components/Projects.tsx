@@ -30,7 +30,7 @@ const Projects = () => {
         />
       </div>
 
-      <div className="mt-20 flex flex-wrap sm:justify-around gap-7 xl:justify-start">
+      <div className="mt-20 flex flex-wrap xs:justify-around gap-7 xl:justify-start">
         <ProjectCard />
       </div>
     </>

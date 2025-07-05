@@ -62,7 +62,7 @@ const Hero = memo(() => {
           <LoadingSpinner />
         </div>
       )}
-      <section className={`relative w-full h-screen mx-auto`}>
+      <section className="relative w-full h-screen mx-auto">
         <div
           className={`absolute inset-0 top-[50px] sm:top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
         >
@@ -140,7 +140,7 @@ const Hero = memo(() => {
             className="w-60 h-60 xl:ml-40 lg:block hidden"
           />
         </div>
-        <div className="absolute w-full flex justify-center items-center top-[280px] sm:top-[350px] left-0 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
+        <div className="absolute w-full flex justify-center items-center top-[320px] sm:top-[350px] left-0 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 ">
           <Lottie
             animationData={HeroAnimationData}
             className="w-[400px] h-[380px] md:w-[550px] md:h-[550px]"

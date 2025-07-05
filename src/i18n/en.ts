@@ -3,6 +3,7 @@ export default {
   nav_link_work_title: 'Experince',
   nav_link_project_title: 'Projects',
   nav_link_contact_title: 'Contact',
+  nav_link_service_title: 'Service',
 
   hero_head_title: "Hi, I'm",
   hero_download_cv_text: 'Download CV',
@@ -82,4 +83,63 @@ export default {
 
   //footer
   footer_text: 'Hendry Prasetyo. All rights reserved.',
+
+  //SERVICES
+  service_title_meta: 'Website Creation Services | Hendry Prasetyo',
+  service_subs_title: 'Any kind of Website',
+  service_ternary_title:
+    'Immediately consult your idea, and sit back and enjoy the rest!',
+  service_btn_order_now: 'Order Now',
+  service_price_list_head_title: 'Limited Offer',
+  service_price_list_sub_title: 'Digitize Your Ideas and Get Wider Reach.',
+  service_text_discount: 'Discount',
+  service_text_btn_select_package: 'Select Package',
+
+  service_offer_feature_free_domain_title: 'Free Domain (.com)',
+  service_offer_feature_sharring_hosting_title: 'Shared Hosting',
+  service_offer_feature_free_hosting_title: 'Free Hosting (1 Tahun)',
+  service_offer_feature_sharring_hosting_desc:
+    'A storage place for your website files that are shared with other users.',
+  service_offer_feature_design_responsive_title:
+    'Responsive Design (Mobile & Desktop)',
+  service_offer_feature_direct_wa_title: 'Direct WhatsApp Chat',
+  service_offer_feature_email_one_title: '1 Business Email',
+  service_offer_feature_email_five_title: '5 Business Email',
+  service_offer_feature_email__desc:
+    'Email account with your business domain name, example: info@yourbusiness.com',
+  service_offer_feature_disk_storage_one_title: '1GB Disk Storage',
+  service_offer_feature_disk_storage_five_title: '5GB Disk Storage',
+  service_offer_feature_disk_storage_fivety_title: '50GB Disk Storage',
+  service_offer_feature_disk_storage_desc:
+    'Storage capacity for your website files, such as images and text.',
+  service_offer_feature_free_ssl_title: 'Free SSL',
+  service_offer_feature_free_ssl_desc:
+    'Additional security for your website using HTTPS connection.',
+  service_offer_feature_seo_friendly_title: 'SEO Freandly',
+  service_offer_feature_free_revition_2x_title: 'Free Revition 2x',
+  service_offer_feature_free_revition_3x_title: 'Free Revition 3x',
+  service_offer_feature_free_revition_5x_title: 'Free Revition 5x',
+  service_offer_feature_maintance_guarante_30d_title:
+    '30 Day Maintenance Guarantee',
+  service_offer_feature_maintance_guarante_45d_title:
+    '45 Day Maintenance Guarantee',
+  service_offer_feature_maintance_guarante_60d_title:
+    '60 Day Maintenance Guarantee',
+  service_offer_feature_video_guide_title: 'How-To Videos',
+  service_offer_feature_ddos_protection_title: 'DDoS Protection',
+  service_offer_feature_ddos_protection_desc:
+    'Protection to keep websites safe from malicious traffic attacks (DDoS).',
+  service_offer_feature_animation_title: 'Interactive Animation',
+  service_offer_feature_req_title: 'Request Specific Features',
+  service_offer_feature_req_desc:
+    'You can request additional features tailored to your business needs.',
+  service_offer_feature_help_priority_title: 'Priority Assistance',
+  service_offer_feature_help_priority_desc:
+    'Priority in the work process and technical support if there are any obstacles.',
+  service_offer_note_silver:
+    '*Choose it if you are just starting out and need a display page without many dynamic elements and functions.',
+  service_offer_note_gold:
+    '*Choose if you want a landing page that is more attractive, professional and has dynamic functions.',
+  service_offer_note_platinum:
+    '*Choose if you need a very dynamic landing page with optimization for digital marketing.',
 }

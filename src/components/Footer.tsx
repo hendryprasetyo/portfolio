@@ -29,7 +29,7 @@ const Footer = () => {
           <li key={nav.id}>
             <a
               className="text-tertiary hover:text-secondary hover:font-medium transition"
-              href={`#${nav.id}`}
+              href={`/portfolio#${nav.id}`}
             >
               <FormattedMessage id={nav.title} />
             </a>

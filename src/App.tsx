@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import MainLayout from './components/MainLayout'
-import Home from './pages/Home'
-import { createContext, Suspense, useEffect, useState } from 'react'
+import { createContext, lazy, Suspense, useEffect, useState } from 'react'
 import LoadingSpinner from './components/LoadingSpinner'
 import { IntlProvider } from 'react-intl'
 import idMessages from './i18n/id'
 import enMessages from './i18n/en'
+import { HelmetProvider } from 'react-helmet-async'
+const MainLayout = lazy(() => import('./components/MainLayout'))
+const HomePage = lazy(() => import('./pages/Home'))
+const ServicePage = lazy(() => import('./pages/Service'))
 
 type LanguageContextType = {
   locale: 'en' | 'id'
@@ -48,21 +50,24 @@ const App = () => {
         defaultLocale="en"
         onError={() => {}}
       >
-        <Router>
-          <Suspense
-            fallback={
-              <div className="fixed inset-0 z-50 flex h-screen w-full items-center justify-center bg-white">
-                <LoadingSpinner />
-              </div>
-            }
-          >
-            <Routes>
-              <Route path="/" element={<MainLayout />}>
-                <Route path="/portfolio" element={<Home />} />
-              </Route>
-            </Routes>
-          </Suspense>
-        </Router>
+        <HelmetProvider>
+          <Router>
+            <Suspense
+              fallback={
+                <div className="fixed inset-0 z-50 flex h-screen w-full items-center justify-center bg-white">
+                  <LoadingSpinner />
+                </div>
+              }
+            >
+              <Routes>
+                <Route path="/portfolio" element={<MainLayout />}>
+                  <Route index element={<HomePage />} />
+                  <Route path="services" element={<ServicePage />} />
+                </Route>
+              </Routes>
+            </Suspense>
+          </Router>
+        </HelmetProvider>
       </IntlProvider>
     </LanguageContext.Provider>
   )

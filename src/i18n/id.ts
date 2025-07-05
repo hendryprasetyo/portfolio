@@ -3,6 +3,7 @@ export default {
   nav_link_work_title: 'Pengalaman',
   nav_link_project_title: 'Proyek',
   nav_link_contact_title: 'Kontak',
+  nav_link_service_title: 'Layanan',
 
   hero_head_title: 'Hi, Aku',
   hero_download_cv_text: 'Unduh CV',
@@ -83,4 +84,63 @@ dapat diskalakan, dan mudah digunakan yang memecahkan masalah dunia nyata. <br /
 
   //footer
   footer_text: 'Hendry Prasetyo. Semua hak dilindungi undang-undang.',
+
+  //SERVICES
+  service_title_meta: 'Layanan Pembuatan Website | Hendry Prasetyo',
+  service_subs_title: 'Segala Jenis Website',
+  service_ternary_title:
+    'Segera konsultasikan idemu, dan duduk manis terima beres!',
+  service_btn_order_now: 'Pesan Sekarang',
+  service_price_list_head_title: 'Penawaran Terbatas',
+  service_price_list_sub_title:
+    'Digitalisasikan Idemu dan Dapatkan Jangkauan yang lebih lebih luas.',
+  service_text_discount: 'Diskon',
+  service_text_btn_select_package: 'Pilih Paket',
+  service_offer_feature_free_domain_title: 'Gratis Domain (.com)',
+  service_offer_feature_sharring_hosting_title: 'Shared Hosting',
+  service_offer_feature_free_hosting_title: 'Gratis Hosting (1 Tahun)',
+  service_offer_feature_sharring_hosting_desc:
+    'Tempat penyimpanan file website Anda yang dibagikan dengan pengguna lain.',
+  service_offer_feature_design_responsive_title:
+    'Desain Responsif (Mobile & Desktop)',
+  service_offer_feature_direct_wa_title: 'Direct WhatsApp Chat',
+  service_offer_feature_email_one_title: '1 Email Bisnis',
+  service_offer_feature_email_five_title: '5 Email Bisnis',
+  service_offer_feature_email__desc:
+    'Akun email dengan nama domain bisnis Anda, contoh: info@bisnisanda.com',
+  service_offer_feature_disk_storage_one_title: '1GB Penyimpanan Disk',
+  service_offer_feature_disk_storage_five_title: '5GB Penyimpanan Disk',
+  service_offer_feature_disk_storage_fivety_title: '50GB Penyimpanan Disk',
+  service_offer_feature_disk_storage_desc:
+    'Kapasitas penyimpanan untuk file website Anda, seperti gambar dan teks.',
+  service_offer_feature_free_ssl_title: 'Gratis SSL',
+  service_offer_feature_free_ssl_desc:
+    'Keamanan tambahan agar website Anda menggunakan koneksi HTTPS.',
+  service_offer_feature_seo_friendly_title: 'SEO Freandly',
+  service_offer_feature_free_revition_2x_title: 'Gratis Revisi 2x',
+  service_offer_feature_free_revition_3x_title: 'Gratis Revisi 3x',
+  service_offer_feature_free_revition_5x_title: 'Gratis Revisi 5x',
+  service_offer_feature_maintance_guarante_30d_title:
+    'Garansi Maintenance 30 Hari',
+  service_offer_feature_maintance_guarante_45d_title:
+    'Garansi Maintenance 45 Hari',
+  service_offer_feature_maintance_guarante_60d_title:
+    'Garansi Maintenance 60 Hari',
+  service_offer_feature_video_guide_title: 'Video Panduan',
+  service_offer_feature_ddos_protection_title: 'Proteksi DDoS',
+  service_offer_feature_ddos_protection_desc:
+    'Perlindungan agar website tetap aman dari serangan trafik berbahaya (DDoS).',
+  service_offer_feature_animation_title: 'Animasi Interaktif',
+  service_offer_feature_req_title: 'Request Feature Tertentu',
+  service_offer_feature_req_desc:
+    'Anda bisa request fitur tambahan yang disesuaikan dengan kebutuhan bisnis.',
+  service_offer_feature_help_priority_title: 'Bantuan Prioritas',
+  service_offer_feature_help_priority_desc:
+    'Prioritas dalam proses pengerjaan dan dukungan teknis jika ada kendala.',
+  service_offer_note_silver:
+    '*Pilih jika Anda baru mulai dan butuh halaman display tanpa banyak elemen dan fungsi dinamis.',
+  service_offer_note_gold:
+    '*Pilih jika ingin landing page yang lebih menarik, profesional dan fungsi dinamis.',
+  service_offer_note_platinum:
+    '*Pilih jika butuh landing page yang sangat dinamis dengan optimasi untuk pemasaran digital.',
 }

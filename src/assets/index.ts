@@ -39,6 +39,10 @@ import certificate_harisenin from './harisenin.png'
 import certificate_udemy_mern from './Udemy_certification_mern_stack.jpg'
 import certificate_vsga_junior_web_dev from './vsga_junior_web_dev.png'
 
+
+//services
+import head_image_service from './services/head_image_service.jpg'
+import whatsapp_service from './services/whatsapp.svg'
 export {
   januari_arka,
   backend,
@@ -74,4 +78,6 @@ export {
   escrow_blur,
   id_flag,
   en_flag,
+  head_image_service,
+  whatsapp_service,
 }

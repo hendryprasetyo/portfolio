@@ -417,3 +417,259 @@ export const certification = [
     image: certificate_vsga_junior_web_dev,
   },
 ]
+
+export const offers = [
+  {
+    name: 'Silver',
+    price: 'Rp 600.000',
+    price_before_discount: 'Rp 1.000.000',
+    display_discount: '40%',
+    features: [
+      {
+        desription: '',
+        title: 'service_offer_feature_free_domain_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_sharring_hosting_desc',
+        title: 'service_offer_feature_sharring_hosting_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_design_responsive_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_direct_wa_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_email__desc',
+        title: 'service_offer_feature_email_one_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_disk_storage_desc',
+        title: 'service_offer_feature_disk_storage_one_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_free_ssl_desc',
+        title: 'service_offer_feature_free_ssl_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_seo_friendly_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_free_revition_2x_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_maintance_guarante_30d_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_video_guide_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_ddos_protection_desc',
+        title: 'service_offer_feature_ddos_protection_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_animation_title',
+        enable: false,
+      },
+      {
+        desription: 'service_offer_feature_req_desc',
+        title: 'service_offer_feature_req_title',
+        enable: false,
+      },
+      {
+        desription: 'service_offer_feature_help_priority_desc',
+        title: 'service_offer_feature_help_priority_title',
+        enable: false,
+      },
+    ],
+    note: 'service_offer_note_silver',
+  },
+  {
+    name: 'Gold',
+    price: 'Rp 990.000',
+    price_before_discount: 'Rp 1.500.000',
+    display_discount: '34%',
+    features: [
+      {
+        desription: '',
+        title: 'service_offer_feature_free_domain_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_sharring_hosting_desc',
+        title: 'service_offer_feature_sharring_hosting_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_design_responsive_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_direct_wa_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_email__desc',
+        title: 'service_offer_feature_email_five_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_disk_storage_desc',
+        title: '5GB Disk Storage',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_free_ssl_desc',
+        title: 'service_offer_feature_free_ssl_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_seo_friendly_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_free_revition_3x_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_maintance_guarante_45d_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_video_guide_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_ddos_protection_desc',
+        title: 'service_offer_feature_ddos_protection_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_animation_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_req_desc',
+        title: 'service_offer_feature_req_title',
+        enable: false,
+      },
+      {
+        desription: 'service_offer_feature_help_priority_desc',
+        title: 'service_offer_feature_help_priority_title',
+        enable: false,
+      },
+    ],
+    highlight: true,
+    note: 'service_offer_note_gold',
+  },
+  {
+    name: 'Platinum',
+    price: 'Rp 1.850.000',
+    price_before_discount: 'Rp 2.500.000',
+    display_discount: '26%',
+    features: [
+      {
+        desription: '',
+        title: 'service_offer_feature_free_domain_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_free_hosting_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_design_responsive_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_direct_wa_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_email__desc',
+        title: 'service_offer_feature_email_five_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_disk_storage_desc',
+        title: 'service_offer_feature_disk_storage_fivety_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_free_ssl_desc',
+        title: 'service_offer_feature_free_ssl_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_seo_friendly_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_free_revition_5x_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_maintance_guarante_60d_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_video_guide_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_ddos_protection_desc',
+        title: 'service_offer_feature_ddos_protection_title',
+        enable: true,
+      },
+      {
+        desription: '',
+        title: 'service_offer_feature_animation_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_req_desc',
+        title: 'service_offer_feature_req_title',
+        enable: true,
+      },
+      {
+        desription: 'service_offer_feature_help_priority_desc',
+        title: 'service_offer_feature_help_priority_title',
+        enable: true,
+      },
+    ],
+    note: 'service_offer_note_platinum',
+  },
+]

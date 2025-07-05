@@ -5,6 +5,7 @@ import { navLinks, TNavLinks } from '../constants'
 import LoadingSpinner from './LoadingSpinner'
 import LocaleSwitcher from './LocaleSelectore'
 import { FormattedMessage } from 'react-intl'
+import { Link } from 'react-router-dom'
 
 const LazyLogo = lazy(() => import('./LogoNavbar'))
 const Navbar = () => {
@@ -38,7 +39,7 @@ const Navbar = () => {
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <a
-          href="#"
+          href="/portfolio#"
           className="flex items-center gap-2"
           onClick={() => {
             setActive('')
@@ -58,11 +59,19 @@ const Navbar = () => {
               } hover:text-secondary text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>
+              <a href={`/portfolio#${nav.id}`}>
                 <FormattedMessage id={nav.title} />
               </a>
             </li>
           ))}
+          <li>
+            <Link
+              className="hover:text-secondary text-secondary/80 text-[18px] font-medium cursor-pointer"
+              to={'/portfolio/services'}
+            >
+              <FormattedMessage id="nav_link_service_title" />
+            </Link>
+          </li>
           <li>
             <LocaleSwitcher />
           </li>
@@ -99,6 +108,21 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+              <li
+                className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  active === 'nav_link_service_title'
+                    ? 'text-white'
+                    : 'text-secondary'
+                }`}
+                onClick={() => {
+                  setToggle(!toggle)
+                  setActive('nav_link_service_title')
+                }}
+              >
+                <Link className="cursor-pointer" to={'/portfolio/services'}>
+                  <FormattedMessage id="nav_link_service_title" />
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
