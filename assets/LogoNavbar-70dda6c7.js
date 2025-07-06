@@ -1,0 +1,1 @@
+import{j as o}from"./index-ddddc39a.js";const t="/portfolio/original.jpg",e=()=>o.jsx("img",{src:t,alt:"logo",width:36,height:36,loading:"eager",title:"Hendry Picture",className:"w-9 h-9 rounded-full"});export{e as default};
