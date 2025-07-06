@@ -6,10 +6,10 @@ import { styles } from '../styles'
 import { EarthCanvas } from './canvas'
 import { SectionWrapper } from '../hoc'
 import { slideIn } from '../utils/motion'
-const Modal = lazy(() => import('./Modal'))
 import { AiOutlineCheckCircle, AiOutlineCloseCircle } from 'react-icons/ai'
 import LoadingSpinner from './LoadingSpinner'
 import { FormattedMessage, useIntl } from 'react-intl'
+const Modal = lazy(() => import('./Modal'))
 
 type FormState = {
   name: string
@@ -125,7 +125,7 @@ const Contact = () => {
                 placeholder={intl.formatMessage({
                   id: 'contact_placeholder_form_your_name',
                 })}
-                className="bg-quinary py-4 px-6 placeholder:text-tertiary text-tertiary rounded-lg outline-none border-2 border-tertiary font-medium"
+                className="bg-quinary py-2 px-4 placeholder:text-tertiary text-tertiary rounded-lg outline-none border-2 border-tertiary font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -142,7 +142,7 @@ const Contact = () => {
                 placeholder={intl.formatMessage({
                   id: 'contact_placeholder_form_your_email',
                 })}
-                className="bg-quinary border-2 border-tertiary py-4 px-6 placeholder:text-tertiary text-tertiary rounded-lg outline-none font-medium"
+                className="bg-quinary border-2 border-tertiary py-2 px-4 placeholder:text-tertiary text-tertiary rounded-lg outline-none font-medium"
               />
             </label>
             <label className="flex flex-col">
@@ -157,7 +157,7 @@ const Contact = () => {
                 placeholder={intl.formatMessage({
                   id: 'contact_placeholder_form_your_message',
                 })}
-                className="bg-quinary py-4 px-6 placeholder:text-tertiary text-tertiary rounded-lg outline-none border-2 border-tertiary font-medium"
+                className="bg-quinary py-2 px-4 placeholder:text-tertiary text-tertiary rounded-lg outline-none border-2 border-tertiary font-medium"
               />
             </label>
 
